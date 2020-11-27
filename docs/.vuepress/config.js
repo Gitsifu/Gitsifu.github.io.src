@@ -25,15 +25,22 @@ module.exports = {
     },
     theme: '@vuepress/blog',
     themeConfig: {
+        globalPagination: {
+            prevText:'上一頁', // Text for previous links.
+            nextText:'下一頁', // Text for next links.
+            lengthPerPage:'2', // Maximum number of posts per page.
+            layout:'Pagination', // Layout for pagination page
+        },
+        smoothScroll: true,
         dateFormat: 'YYYY-MM-DD',
         nav: [
             {
                 text: '首页',
-                link: '/',
+                link: '/home/',
             },
             {
-                text: '测试',
-                link: '/test/',
+                text: '随笔',
+                link: '/writings/',
             },
             {
                 text: '标签',
@@ -83,7 +90,7 @@ module.exports = {
             {
                 id: 'home', // Unique id for current classifier
                 dirname: '_home', // Matched directory name
-                path: '/', // Entry page for current classifier
+                path: '/home/', // Entry page for current classifier
                 title: '首页', // Entry and pagination page titles for current classifier.
                 layout: 'IndexWriting', // Layout component name for entry page.
                 frontmatter:{ //Front matter for entry page.
