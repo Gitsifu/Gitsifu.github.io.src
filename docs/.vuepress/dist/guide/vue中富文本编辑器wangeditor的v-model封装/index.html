@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue中富文本编辑器wangeditor的v-model封装 | sifu</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="以下代码实现只配置部分功能，更多功能扩展请查阅wangeditor官网
+
+一、下载依赖
+注意wangeditor全部是小写
+npm install wangeditor --save
+二、实现过程中遇到的坑
+ 1、当一个页面中使用到多个富文本组件时，会导致组件之间的id或者ref重复，导致 ...">
+    
+    <link rel="preload" href="/assets/css/0.styles.2dca04c2.css" as="style"><link rel="preload" href="/assets/js/app.1dfd97f7.js" as="script"><link rel="preload" href="/assets/js/6.39a97e4f.js" as="script"><link rel="preload" href="/assets/js/3.84a96812.js" as="script"><link rel="preload" href="/assets/js/17.f8137292.js" as="script"><link rel="prefetch" href="/assets/js/10.a5d46769.js"><link rel="prefetch" href="/assets/js/11.64a88e37.js"><link rel="prefetch" href="/assets/js/12.d10d378a.js"><link rel="prefetch" href="/assets/js/13.a39daee7.js"><link rel="prefetch" href="/assets/js/14.eedc1c3a.js"><link rel="prefetch" href="/assets/js/15.117152a8.js"><link rel="prefetch" href="/assets/js/16.20d1642b.js"><link rel="prefetch" href="/assets/js/18.fc265587.js"><link rel="prefetch" href="/assets/js/19.e14309cc.js"><link rel="prefetch" href="/assets/js/20.6351239e.js"><link rel="prefetch" href="/assets/js/21.eaaf50f6.js"><link rel="prefetch" href="/assets/js/22.19637079.js"><link rel="prefetch" href="/assets/js/4.f1a80a2d.js"><link rel="prefetch" href="/assets/js/5.e2f96400.js"><link rel="prefetch" href="/assets/js/7.d0b9d7ab.js"><link rel="prefetch" href="/assets/js/8.88d88c61.js"><link rel="prefetch" href="/assets/js/9.27b26d95.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.72e0e427.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2dca04c2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">sifu </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">首页</a></li><li class="nav-item"><a href="/guide/" class="nav-link router-link-active">武功秘籍</a></li><li class="nav-item"><a href="/writings/" class="nav-link">随笔</a></li><li class="nav-item"><a href="/tag/" class="nav-link">标签</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">sifu </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">首页</a></li><li class="mobile-nav-item"><a href="/guide/" class="nav-link router-link-active">武功秘籍</a></li><li class="mobile-nav-item"><a href="/writings/" class="nav-link">随笔</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">标签</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        vue中富文本编辑器wangeditor的v-model封装
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">sifu</span> <span itemprop="address">   in 南昌</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2020-11-27T00:00:00.000Z">
+      2020-11-27
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-532d3a9c><a href="/tag/JavaScript" data-v-532d3a9c><span data-v-532d3a9c>JavaScript</span></a></li><li class="post-tag" data-v-532d3a9c><a href="/tag/Vue" data-v-532d3a9c><span data-v-532d3a9c>Vue</span></a></li><li class="post-tag" data-v-532d3a9c><a href="/tag/wangeditor" data-v-532d3a9c><span data-v-532d3a9c>wangeditor</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><blockquote><p>以下代码实现只配置部分功能，更多功能扩展请查阅<a href="http://www.wangeditor.com/" target="_blank" rel="noopener noreferrer">wangeditor官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <h2 id="一、下载依赖"><a href="#一、下载依赖" class="header-anchor">#</a> 一、下载依赖</h2> <p><strong>注意wangeditor全部是小写</strong></p> <div class="language- extra-class"><pre class="language-text"><code>npm install wangeditor --save
+</code></pre></div><h2 id="二、实现过程中遇到的坑"><a href="#二、实现过程中遇到的坑" class="header-anchor">#</a> 二、实现过程中遇到的坑</h2> <p>1、当一个页面中使用到多个富文本组件时，会导致组件之间的<code>id</code>或者<code>ref</code>重复，导致渲染错误。</p> <p><strong>解决方案</strong>：在组件内部使用随机字符串绑定组件的<code>ref</code>或者<code>id</code>。</p> <hr> <p>2、在父组件中改变<code>v-model</code>绑定的值，富文本内容不改变。</p> <p><strong>解决方案</strong>：使用<code>watch</code>进行监听<code>value</code>变化，具体看代码实现。</p> <hr> <p>3、每次调用<code>editor.txt.html()</code>方法，富文本中的光标就会出现在文末，导致在编辑富文本中间的内容时，出现鬼畜现象。</p> <p><strong>解决方案</strong>：不要在<code>editor.customConfig.onchange()</code>中调用<code>editor.txt.html()</code>方法，而使用组件内部的一个<code>content</code>变量进行储存。然后<code>watch content</code>触发<code>input</code>事件，改变父组件的邦定值</p> <h2 id="三、完整代码实现"><a href="#三、完整代码实现" class="header-anchor">#</a> 三、完整代码实现</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;div :ref=&quot;toolId&quot; class=&quot;toolbar&quot;&gt;&lt;/div&gt;
+    &lt;div :ref=&quot;editorId&quot; class=&quot;text&quot;&gt; &lt;!--可使用 min-height 实现编辑区域自动增加高度--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import wangEditor from 'wangeditor'
+
+export default {
+  name: 'rich-text',
+  props: {
+    value: String
+  },
+  data() {
+    return {
+      content: '',
+      editor: {},
+      toolId: '',
+      editorId: ''
+    }
+  },
+  computed: {
+
+  },
+  watch: {
+    value(val) {
+      if (val) {
+        if (val !== this.content) {
+          this.setContent(val);
+        }
+      } else {
+        this.setContent('');
+      }
+    },
+
+    content(val) {
+      this.$emit('input', val);
+    }
+  },
+  mounted() {
+    this.toolId = this.randomString(12)
+    this.editorId = this.randomString(12)
+    this.content = this.value
+    this.$nextTick(() =&gt; {
+      this.editor = new wangEditor(this.$refs[this.toolId], this.$refs[this.editorId])
+      this.editor.customConfig.onchange = (html) =&gt; {
+        // 监控变化，同步更新到 textarea
+        this.content = html
+      }
+      //配置图片上传服务器接口
+      this.editor.customConfig.uploadImgServer = process.env.VUE_APP_BASE_API + '/file/upload/customizeDirUpload'
+      // 文件名
+      this.editor.customConfig.uploadFileName = 'file'
+      // 配置上传图片请求头部
+      // this.editor.customConfig.uploadImgHeaders = {}
+      // 上传图片钩子函数
+      this.editor.customConfig.uploadImgHooks = {
+        before: function(xhr, editor, files) {
+          // 图片上传之前触发
+          // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
+
+          // 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
+          // return {
+          //     prevent: true,
+          //     msg: '放弃上传'
+          // }
+        },
+        success: function(xhr, editor, result) {
+          // 图片上传并返回结果，图片插入成功之后触发
+          // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+          // alert('成功')
+        },
+        fail: function(xhr, editor, result) {
+          // 图片上传并返回结果，但图片插入错误时触发
+          // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+        },
+        error: function(xhr, editor) {
+          // 图片上传出错时触发
+          // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+        },
+        timeout: function(xhr, editor) {
+          // 图片上传超时时触发
+          // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+        },
+
+        // 如果服务器端返回的不是 {errno:0, data: [...]} 这种格式，可使用该配置
+        // （但是，服务器端返回的必须是一个 JSON 格式字符串！！！否则会报错）
+        customInsert: function(insertImg, result, editor) {
+          // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+          // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+
+          // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+          var url = result.data
+          insertImg(url)
+
+          // result 必须是一个 JSON 格式字符串！！！否则报错
+        }
+      }
+      this.editor.create()
+      this.editor.txt.html(this.value)
+    })
+  },
+  methods: {
+    // 生成随机字符串id
+    randomString(len) {
+      len = len || 32
+      let $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678' /** **默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+      let maxPos = $chars.length
+      let pwd = ''
+      for (let i = 0; i &lt; len; i++) {
+        pwd += $chars.charAt(Math.floor(Math.random() * maxPos))
+      }
+      return 'a' + pwd
+    },
+    setContent(val) {
+      this.editor.txt.html(val)
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+  .toolbar {
+    border: 1px solid #ccc;
+  }
+  .text {
+    border: 1px solid #ccc;
+    min-height: 200px;
+  }
+&lt;/style&gt;
+
+</code></pre></div><h2 id="四、使用"><a href="#四、使用" class="header-anchor">#</a> 四、使用</h2> <p><code>import</code>导入组件后，和使用输入框一样使用即可：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;rich-text v-model=&quot;html&quot;&gt;&lt;/rich-text&gt;
+</code></pre></div></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#一、下载依赖" title="一、下载依赖">一、下载依赖</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#二、实现过程中遇到的坑" title="二、实现过程中遇到的坑">二、实现过程中遇到的坑</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#三、完整代码实现" title="三、完整代码实现">三、完整代码实现</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#四、使用" title="四、使用">四、使用</a></div></div></div></div> <footer class="footer" data-v-8eb634d6><div class="footer-left-wrap" data-v-8eb634d6><ul class="contact" data-v-8eb634d6><li class="contact-item" data-v-8eb634d6><a href="https://github.com/Gitsifu" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-8eb634d6><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-8eb634d6><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-8eb634d6></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-8eb634d6><ul class="copyright" data-v-8eb634d6><li class="copyright-item" data-v-8eb634d6><a href="https://policies.google.com/privacy?hl=en-US" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-8eb634d6>隐私政策</a></li><li class="copyright-item" data-v-8eb634d6>MIT Licensed | Copyright © 2020-present sifu</li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1dfd97f7.js" defer></script><script src="/assets/js/6.39a97e4f.js" defer></script><script src="/assets/js/3.84a96812.js" defer></script><script src="/assets/js/17.f8137292.js" defer></script>
+  </body>
+</html>
