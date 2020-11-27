@@ -3,14 +3,11 @@ title: Hello World
 date: 2020-01-11
 tags: 
   - JavaScript
-  - Vue
-author: Billyyyyy3320
-location: Taipei  
+author: sifu
+location: 南昌  
 ---
+# sifu
 
-# Hello VuePress
-<!-- README.md -->
-
-# Vssue Demo
+这个博主有点懒，首页暂时没有什么可看的~
 
 <Vssue :title="$title" />
