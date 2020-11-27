@@ -12,7 +12,7 @@ module.exports = {
             }
         }
     },
-    // 两种方式都可以
+    // 设置别名，两种方式都可以
     // alias: {
     //     "@assets": path.resolve(__dirname, "../assets")
     // },
