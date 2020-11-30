@@ -84,3 +84,6 @@ npm run dev
 ![image.png](http://upload-images.jianshu.io/upload_images/5011280-169678286787c2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 （如有错误或者问题，请在评论区指出或提出，感谢！！）
+
+
+<Vssue :title="$title" />

@@ -35,3 +35,5 @@ function handleFullscreen () {
       }
     }
 ```
+
+<Vssue :title="$title" />

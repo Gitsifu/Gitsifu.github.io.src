@@ -177,3 +177,4 @@ export default {
 <rich-text v-model="html"></rich-text>
 ```
 
+<Vssue :title="$title" />

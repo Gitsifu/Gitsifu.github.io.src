@@ -33,6 +33,8 @@ npm run blog:dev
 ./deploy-github.sh
 ```
 
+**注意**：gitee部署完之后，需要到`仓库`>`服务`>`Gitee Pages`中更新服务（github部署不需要）
+
 ## 技术支持
 
 - [vuepress](https://www.vuepress.cn/)

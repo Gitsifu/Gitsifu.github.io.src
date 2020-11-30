@@ -49,3 +49,5 @@ module.exports = {
 }
 
 ```
+
+<Vssue :title="$title" />

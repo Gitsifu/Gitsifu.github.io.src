@@ -196,3 +196,4 @@ $on与$emit:
 $on用于监听**自身**组件中执行$emit触发的事件。（$on监听一般写在created生命周期函数中）
 
 
+<Vssue :title="$title" />

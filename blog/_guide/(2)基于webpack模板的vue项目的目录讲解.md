@@ -113,8 +113,4 @@ export default new Router({
 
 （如有错误或者问题，请在评论区指出或提出，感谢！！）
 
-
-
-
-
-
+<Vssue :title="$title" />
