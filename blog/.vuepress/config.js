@@ -26,7 +26,6 @@ const {base,platform,owner,repo,clientId,clientSecret} = platformConfig[PLATFORM
 
 module.exports = {
     base,
-    // baseURL,
     title: 'sifu',
     description: 'sifu的个人博客',
     head:[
