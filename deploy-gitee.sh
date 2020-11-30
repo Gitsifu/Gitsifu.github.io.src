@@ -17,9 +17,6 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
-# 部署到github
-# git push -f git@github.com:Gitsifu/Gitsifu.github.io.git master
-
 # 部署到gitee
 git push -f git@gitee.com:sifu/blog.git master
 
