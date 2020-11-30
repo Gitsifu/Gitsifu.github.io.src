@@ -11,4 +11,6 @@ location: 南昌
 
 这个博主有点懒，首页暂时没有什么可看的~
 
+<!-- more -->
+
 <Vssue :title="$title" />

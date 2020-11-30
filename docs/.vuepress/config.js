@@ -1,5 +1,32 @@
 const path = require("path");
+
+const PLATFORM = 'gitee'
+// const PLATFORM = 'github'
+
+const platformConfig = {
+    github: {
+        base: '/',
+        platform: 'github',
+        owner: 'Gitsifu',
+        repo: 'Gitsifu.github.io',
+        clientId: '5f55e3f7a34fb67e324e',
+        clientSecret: 'ee2bc1ea340708d27b7f6393f7b1fb157969afdb',
+    },
+    gitee: {
+        base: '/blog/',
+        platform: 'gitee',
+        owner: 'sifu',
+        repo: 'blog',
+        clientId: '4c21cb1f3ae4ca1e37568c70669ab560779f61c189ecc36e9b602268894aac66',
+        clientSecret: '9320982f45c61012fe8ecf3d4128a9786e1aeea7a55bafeb846bb137fd573d67',
+    }
+}
+
+const {base,platform,owner,repo,clientId,clientSecret} = platformConfig[PLATFORM]
+
 module.exports = {
+    base,
+    // baseURL,
     title: 'sifu',
     description: 'sifu的个人博客',
     head:[
@@ -18,20 +45,11 @@ module.exports = {
     // },
     plugins: {
         '@vssue/vuepress-plugin-vssue': {
-            // Github 是 'https://github.com'
-            // Gitlab 是 'https://gitlab.com'
-            // Bitbucket 是'https://bitbucket.org'
-            // Gitee 是'https://gitee.com'
-            // Gitea 是'https://gitea.com'
-            // baseURL: 'https://github.com',
-
-            // 设置 `platform` 而不是 `api`
-            platform: 'github',
-            // 其他的 Vssue 配置
-            owner: 'Gitsifu',
-            repo: 'Gitsifu.github.io',
-            clientId: '5f55e3f7a34fb67e324e',
-            clientSecret: 'ee2bc1ea340708d27b7f6393f7b1fb157969afdb',
+            platform,
+            owner,
+            repo,
+            clientId,
+            clientSecret,
             locale: 'zh',
             issueContent: ({url}) =>
                 `这个 Issue 由 Vssue 自动创建，用来存储该页面的评论：${url}`
