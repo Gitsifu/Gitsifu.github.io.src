@@ -1,7 +1,7 @@
 const path = require("path");
 
-// const PLATFORM = 'gitee'
-const PLATFORM = 'github'
+const PLATFORM = 'gitee'
+// const PLATFORM = 'github'
 
 const platformConfig = {
     github: {
@@ -29,8 +29,14 @@ module.exports = {
     title: 'sifu',
     description: 'sifu的个人博客',
     head:[
-        ['link',{rel:'icon',href:'/favicon.ico'}]
+        ['link',{rel:'icon',href:'/favicon.ico'}],
+        // 防图片盗链解决方案 https://github.com/biaochenxuying/blog/issues/31
+        ['meta',{name: 'referrer', content: 'never'}]
     ],
+    // 代码显示行号
+    markdown: {
+        lineNumbers: true
+    },
     configureWebpack: {
         resolve: {
             alias: {
@@ -53,6 +59,19 @@ module.exports = {
             issueContent: ({url}) =>
                 `这个 Issue 由 Vssue 自动创建，用来存储该页面的评论：${url}`
         },
+        '@vuepress/medium-zoom': {
+            selector: '.content__default p img',
+            // medium-zoom options here
+            // See: https://github.com/francoischalifour/medium-zoom#options
+            // options: {
+            //     margin: 16,
+            //     background: '#BADA55',
+            //     scrollOffset: 0,
+            //     container: '#zoom-container',
+            //     template: '#zoom-template',
+            // }
+        },
+        '@vuepress/back-to-top': {}
     },
     theme: '@vuepress/blog',
     themeConfig: {
@@ -65,7 +84,7 @@ module.exports = {
         },
         // 启动平滑
         smoothScroll: true,
-        dateFormat: 'YYYY-MM-DD',
+        dateFormat: 'YYYY-MM-DD dddd',
         // 导航栏配置
         nav: [
             {

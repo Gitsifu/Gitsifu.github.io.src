@@ -20,14 +20,14 @@ location: 南昌
 
 由于我们需要使用node.js中的npm包管理工具，但是由于下载依赖包时很慢，所以使用淘宝镜像cnpm。在命令行中输入：
 
-```
+``` shell script
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
 ## 3.安装全局vue-cli（vue的脚手架工具）
 
 在命令行中输入：
-```
+``` shell script
 npm install -g @vue/cli
 ```
 # 二.使用vue-cli初始化项目
@@ -35,7 +35,7 @@ npm install -g @vue/cli
 新建一个空文件夹，
 
 打开命令行，使用`cd`命令，到该文件夹，并输入：
-```
+``` shell script
 vue init webpack my-project
 ```
 此时它会问几个问题：
@@ -64,15 +64,15 @@ vue init webpack my-project
 (选择第一个，回车)
 ## 2.让项目跑起来
 等待文件下载完成后，执行：
-```
+``` shell script
 cd my-project
 ```
 再执行(下载依赖包)：
-```
+``` shell script
 cnpm install
 ```
 再执行：
-```
+``` shell script
 npm run dev
 ```
 当出现如下提示，即启动成功

@@ -14,7 +14,7 @@ location: 南昌
 
 ## 一、下载依赖
 **注意wangeditor全部是小写**
-```
+```shell
 npm install wangeditor --save
 ```
 ## 二、实现过程中遇到的坑
@@ -34,7 +34,7 @@ npm install wangeditor --save
 **解决方案**：不要在`editor.customConfig.onchange()`中调用`editor.txt.html()`方法，而使用组件内部的一个`content`变量进行储存。然后`watch content`触发`input`事件，改变父组件的邦定值
 
 ## 三、完整代码实现
-```
+``` vue
 <template>
   <div>
     <div :ref="toolId" class="toolbar"></div>
@@ -173,7 +173,7 @@ export default {
 
 ## 四、使用
 `import`导入组件后，和使用输入框一样使用即可：
-```
+``` html
 <rich-text v-model="html"></rich-text>
 ```
 
