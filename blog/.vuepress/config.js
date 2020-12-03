@@ -1,7 +1,7 @@
 const path = require("path");
 
-const PLATFORM = 'gitee'
-// const PLATFORM = 'github'
+// const PLATFORM = 'gitee'
+const PLATFORM = 'github'
 
 const platformConfig = {
     github: {
@@ -48,8 +48,8 @@ module.exports = {
     // alias: {
     //     "@assets": path.resolve(__dirname, "../assets")
     // },
-    plugins: {
-        '@vssue/vuepress-plugin-vssue': {
+    plugins: [
+        ['@vssue/vuepress-plugin-vssue', {
             platform,
             owner,
             repo,
@@ -58,8 +58,8 @@ module.exports = {
             locale: 'zh',
             issueContent: ({url}) =>
                 `这个 Issue 由 Vssue 自动创建，用来存储该页面的评论：${url}`
-        },
-        '@vuepress/medium-zoom': {
+        }],
+        ['@vuepress/medium-zoom', {
             selector: '.content__default p img',
             // medium-zoom options here
             // See: https://github.com/francoischalifour/medium-zoom#options
@@ -70,9 +70,12 @@ module.exports = {
             //     container: '#zoom-container',
             //     template: '#zoom-template',
             // }
-        },
-        '@vuepress/back-to-top': {}
-    },
+        }],
+
+        ['@vuepress/plugin-back-to-top', {}],
+        // 自定义插件
+        // [require('./plugins/plugin-back-to-top'), {}]
+    ],
     theme: '@vuepress/blog',
     themeConfig: {
         // 全局分页配置
