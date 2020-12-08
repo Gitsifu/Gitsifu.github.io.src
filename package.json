@@ -18,9 +18,17 @@
   },
   "homepage": "https://github.com/Gitsifu/Gitsifu.github.io#readme",
   "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.3",
+    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
+    "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
+    "vuepress-plugin-cursor-effects": "^1.0.0",
+    "vuepress-plugin-dynamic-title": "^1.0.0",
     "@vuepress/plugin-back-to-top": "^1.7.1",
     "@vuepress/plugin-medium-zoom": "^1.7.1",
     "@vuepress/theme-blog": "^2.3.3",
     "vuepress": "^1.7.1"
+  },
+  "dependencies": {
+    "wangeditor": "^4.5.2"
   }
 }

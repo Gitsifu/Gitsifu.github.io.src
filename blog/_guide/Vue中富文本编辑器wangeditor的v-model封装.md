@@ -1,5 +1,5 @@
 ---
-title: vue中富文本编辑器wangeditor的v-model封装
+title: vue中富文本编辑器wangeditor@4.x的v-model封装
 date: 2020-11-27
 tags: 
   - JavaScript
@@ -31,9 +31,10 @@ npm install wangeditor --save
 ---
 3、每次调用`editor.txt.html()`方法，富文本中的光标就会出现在文末，导致在编辑富文本中间的内容时，出现鬼畜现象。
 
-**解决方案**：不要在`editor.customConfig.onchange()`中调用`editor.txt.html()`方法，而使用组件内部的一个`content`变量进行储存。然后`watch content`触发`input`事件，改变父组件的邦定值
+**解决方案**：不要在`editor.config.onchange()`中调用`editor.txt.html()`方法，而使用组件内部的一个`content`变量进行储存。然后`watch content`触发`input`事件，改变父组件的邦定值
 
 ## 三、完整代码实现
+
 ``` vue
 <template>
   <div>
@@ -83,18 +84,18 @@ export default {
     this.content = this.value
     this.$nextTick(() => {
       this.editor = new wangEditor(this.$refs[this.toolId], this.$refs[this.editorId])
-      this.editor.customConfig.onchange = (html) => {
+      this.editor.config.onchange = (html) => {
         // 监控变化，同步更新到 textarea
         this.content = html
       }
       //配置图片上传服务器接口
-      this.editor.customConfig.uploadImgServer = process.env.VUE_APP_BASE_API + '/file/upload/customizeDirUpload'
+      this.editor.config.uploadImgServer = '/file/upload/customizeDirUpload'
       // 文件名
-      this.editor.customConfig.uploadFileName = 'file'
+      this.editor.config.uploadFileName = 'file'
       // 配置上传图片请求头部
-      // this.editor.customConfig.uploadImgHeaders = {}
+      // this.editor.config.uploadImgHeaders = {}
       // 上传图片钩子函数
-      this.editor.customConfig.uploadImgHooks = {
+      this.editor.config.uploadImgHooks = {
         before: function(xhr, editor, files) {
           // 图片上传之前触发
           // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
@@ -176,5 +177,21 @@ export default {
 ``` html
 <rich-text v-model="html"></rich-text>
 ```
+
+## 五、实现效果
+
+<RecoDemo>
+  <template slot="code-template">
+     <<< @/blog/.vuepress/demo/rich-text.vue?template
+  </template>
+  <template slot="code-script">
+    <<< @/blog/.vuepress/demo/rich-text.vue?script
+  </template>
+  <template slot="code-style">
+    <<< @/blog/.vuepress/demo/rich-text.vue?style
+  </template>
+  <rich-text slot="demo"></rich-text>
+</RecoDemo>
+
 
 <Vssue :title="$title" />
