@@ -42,20 +42,6 @@ Vue.use(Animated,{
 或者不用指令直接使用class
 <h1 class="wow animate__bounce">v-animated</h1>
 ```
-## 效果
-
-<RecoDemo>
-  <template slot="code-template">
-     <<< @/blog/.vuepress/demo/v-animated.vue?template
-  </template>
-  <template slot="code-script">
-    <<< @/blog/.vuepress/demo/v-animated.vue?script
-  </template>
-  <template slot="code-style">
-    <<< @/blog/.vuepress/demo/v-animated.vue?style
-  </template>
-  <v-animated slot="demo"></v-animated>
-</RecoDemo>
 
 ## 源码仓库
 

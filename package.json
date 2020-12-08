@@ -29,8 +29,5 @@
     "vuepress": "^1.7.1"
   },
   "dependencies": {
-    "animate.css": "^4.1.1",
-    "v-animated": "^0.0.5",
-    "wangeditor": "^4.5.2"
   }
 }

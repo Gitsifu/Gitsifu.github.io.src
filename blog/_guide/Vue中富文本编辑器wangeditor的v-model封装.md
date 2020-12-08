@@ -178,7 +178,9 @@ export default {
 <rich-text v-model="html"></rich-text>
 ```
 
+<!--
 ## 五、实现效果
+
 
 <RecoDemo>
   <template slot="code-template">
@@ -192,6 +194,6 @@ export default {
   </template>
   <rich-text slot="demo"></rich-text>
 </RecoDemo>
-
+-->
 
 <Vssue :title="$title" />
