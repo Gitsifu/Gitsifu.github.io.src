@@ -178,22 +178,11 @@ export default {
 <rich-text v-model="html"></rich-text>
 ```
 
-<!--
+
 ## 五、实现效果
 
-
-<RecoDemo>
-  <template slot="code-template">
-     <<< @/blog/.vuepress/demo/rich-text.vue?template
-  </template>
-  <template slot="code-script">
-    <<< @/blog/.vuepress/demo/rich-text.vue?script
-  </template>
-  <template slot="code-style">
-    <<< @/blog/.vuepress/demo/rich-text.vue?style
-  </template>
-  <rich-text slot="demo"></rich-text>
-</RecoDemo>
--->
+<ClientOnly>
+  <rich-text></rich-text>
+</ClientOnly>
 
 <Vssue :title="$title" />

@@ -1,5 +1,5 @@
 import SomeDemo from './demo/demo'
-// import RichText from './demo/rich-text'
+import RichText from './demo/rich-text'
 
 export default ({
                     Vue, // VuePress 正在使用的 Vue 构造函数
@@ -9,5 +9,5 @@ export default ({
                     isServer // 当前应用配置是处于 服务端渲染 或 客户端
                 }) => {
     Vue.component(SomeDemo.name, SomeDemo)
-    // Vue.component(RichText.name, RichText)
+    Vue.component(RichText.name, RichText)
 }
