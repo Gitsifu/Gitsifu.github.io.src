@@ -84,17 +84,17 @@ module.exports = {
                 zIndex: 999999999           // z-index property of the canvas, default: 999999999
             }
         ],
-        [
-            //动态标题 先安装在配置， npm install vuepress-plugin-dynamic-title --save
-            "dynamic-title",
-            {
-                showIcon: "/favicon.ico",
-                showText: "(/≧▽≦/)咦！又好了！",
-                hideIcon: "/failure.ico",
-                hideText: "(●—●)喔哟，崩溃啦！",
-                recoverTime: 2000
-            }
-        ],
+        // [
+        //     //动态标题 先安装在配置， npm install vuepress-plugin-dynamic-title --save
+        //     "dynamic-title",
+        //     {
+        //         showIcon: "/favicon.ico",
+        //         showText: "(/≧▽≦/)咦！又好了！",
+        //         hideIcon: "/failure.ico",
+        //         hideText: "(●—●)喔哟，崩溃啦！",
+        //         recoverTime: 2000
+        //     }
+        // ],
         [
             "@vuepress-reco/vuepress-plugin-kan-ban-niang",
             {
@@ -123,42 +123,42 @@ module.exports = {
                 height: 330,
             }
         ],
-        [
-            "@vuepress-reco/vuepress-plugin-bgm-player",
-            {
-                audios: [
-                    // 本地文件示例
-                    // {
-                    //     name: '장가갈 수 있을까',
-                    //     artist: '咖啡少年',
-                    //     url: '/bgm/1.mp3',
-                    //     cover: '/bgm/1.jpg'
-                    // },
-                    // 网络文件示例
-                    {
-                        name: '강남역 4번 출구',
-                        artist: 'Plastic / Fallin` Dild',
-                        url: 'https://assets.smallsunnyfox.com/music/2.mp3',
-                        cover: 'https://assets.smallsunnyfox.com/music/2.jpg'
-                    },
-                    {
-                        name: '用胳膊当枕头',
-                        artist: '최낙타',
-                        url: 'https://assets.smallsunnyfox.com/music/3.mp3',
-                        cover: 'https://assets.smallsunnyfox.com/music/3.jpg'
-                    }
-                ],
-                position: {
-                    left: '10px',
-                    bottom: '70px',
-                    'z-index': '999999'
-                },
-                floatStyle: {
-                    bottom: '90px',
-                    'z-index': '999999'
-                }
-            }
-        ],
+        // [
+        //     "@vuepress-reco/vuepress-plugin-bgm-player",
+        //     {
+        //         audios: [
+        //             // 本地文件示例
+        //             // {
+        //             //     name: '장가갈 수 있을까',
+        //             //     artist: '咖啡少年',
+        //             //     url: '/bgm/1.mp3',
+        //             //     cover: '/bgm/1.jpg'
+        //             // },
+        //             // 网络文件示例
+        //             {
+        //                 name: '강남역 4번 출구',
+        //                 artist: 'Plastic / Fallin` Dild',
+        //                 url: 'https://assets.smallsunnyfox.com/music/2.mp3',
+        //                 cover: 'https://assets.smallsunnyfox.com/music/2.jpg'
+        //             },
+        //             {
+        //                 name: '用胳膊当枕头',
+        //                 artist: '최낙타',
+        //                 url: 'https://assets.smallsunnyfox.com/music/3.mp3',
+        //                 cover: 'https://assets.smallsunnyfox.com/music/3.jpg'
+        //             }
+        //         ],
+        //         position: {
+        //             left: '10px',
+        //             bottom: '70px',
+        //             'z-index': '999999'
+        //         },
+        //         floatStyle: {
+        //             bottom: '90px',
+        //             'z-index': '999999'
+        //         }
+        //     }
+        // ],
         [
             "@vuepress-reco/extract-code"
         ],

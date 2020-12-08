@@ -1,5 +1,6 @@
 import SomeDemo from './demo/demo'
 import RichText from './demo/rich-text'
+import VAnimated from './demo/v-animated'
 
 export default ({
                     Vue, // VuePress 正在使用的 Vue 构造函数
@@ -10,4 +11,5 @@ export default ({
                 }) => {
     Vue.component(SomeDemo.name, SomeDemo)
     Vue.component(RichText.name, RichText)
+    Vue.component(VAnimated.name, VAnimated)
 }
