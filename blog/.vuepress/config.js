@@ -1,7 +1,7 @@
 const path = require("path");
 
-// const PLATFORM = 'gitee'
-const PLATFORM = 'github'
+const PLATFORM = 'gitee'
+// const PLATFORM = 'github'
 
 const platformConfig = {
     github: {
@@ -73,8 +73,10 @@ module.exports = {
         }],
 
         ['@vuepress/plugin-back-to-top', {}],
+
         // 自定义插件
         // [require('./plugins/plugin-back-to-top'), {}]
+
         [
             //鼠标点击特效 先安装在配置， npm install vuepress-plugin-cursor-effects --save
             "cursor-effects",
@@ -84,6 +86,7 @@ module.exports = {
                 zIndex: 999999999           // z-index property of the canvas, default: 999999999
             }
         ],
+
         // [
         //     //动态标题 先安装在配置， npm install vuepress-plugin-dynamic-title --save
         //     "dynamic-title",
