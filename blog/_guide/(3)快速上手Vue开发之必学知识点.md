@@ -17,7 +17,7 @@ location: 南昌
 
 ## 1.`v-bind`使用:
 子组件：
-```
+``` vue
 <template>
   <div>{{msg}}</div>
 </template>
@@ -46,7 +46,7 @@ location: 南昌
 </style>
 ```
 父组件：
-```
+``` vue
 <template>
   <div>
     <h1>父组件传值给子组件demo：</h1>
@@ -79,11 +79,12 @@ location: 南昌
 </style>
 ```
 效果图：
+
 ![image.png](https://upload-images.jianshu.io/upload_images/5011280-9d24fd5ccdae21b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 2.`v-on`与`$emit("eventName",...)`使用
 子组件：
-```
+``` vue
 <template>
     <div>
       <button v-on:click="test">点我一下</button>
@@ -113,7 +114,7 @@ location: 南昌
 </style>
 ```
 父组件：
-```
+``` vue
 <template>
   <div>
     <child v-on:event="clickButton"></child>
@@ -146,10 +147,14 @@ location: 南昌
 <style scoped>
 </style>
 ```
-效果图：下载源码看效果吧。
+> 效果
+
+<ClientOnly>
+  <demo-father></demo-father>
+</ClientOnly>
 
 ##  3.$on()和$emit()的使用
-```
+``` vue
 <template>
   <div>
     <button v-on:click="clickFunc">点击一下</button>
@@ -183,9 +188,13 @@ location: 南昌
 <style scoped>
 </style>
 ```
-效果下载源码看。
+> 效果
 
-**解释**：
+<ClientOnly>
+  <on-emit></on-emit>
+</ClientOnly>
+
+## 4、总结
 
 v-bind用于父组件传递数据给子组件。子组件通过props进行接收。props中的变量使用和data(){return{}}中的使用方式一样。
 

@@ -13,7 +13,7 @@ location: 南昌
 
 那么有没有什么办法让循环播放的时候中途不出现空白呢？具体实现代码如下：
 
-```
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +78,7 @@ location: 南昌
 **注意：滚动区域的内容需要比滚动区域的大小大**
 
 以上是普通的html文件的写法，那如果是vue组件如何编写呢？在vue里面实现这个会有一个有关`$refs`的坑，**巨坑！！！**，下面我们来写一下在vue里的实现，跳过这个坑。(ref相关的内容请自行查看vue官网)
-```
+``` vue
 <template>
 <div ref="wrapper" class="wrapper" @mouseenter="stopQu()" @mouseleave="startQu()">
    <div ref="content"  class="content">

@@ -8,7 +8,7 @@ author: sifu
 location: 南昌
 ---
 
-# 一.目录结构
+## 一.目录结构
 使用IDEA打开这个项目
 
 ![vue项目目录结构](http://upload-images.jianshu.io/upload_images/5011280-3893187b174c062f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -27,7 +27,7 @@ static -- 存放静态文件的
 package.json -- 项目的描述，依赖的文件配置等等
 README.md -- 项目的描述
 ```
-# 二. 部分文件及配置的具体讲解
+## 二. 部分文件及配置的具体讲解
 - `/config/index.js`，此文件下有一个dev节点，dev节点下有两个属性较为常用。
 -`port`:启动应用的端口号设置
 -`autoOpenBrowser`:执行`npm run dev`命令后是否自动打开浏览器
@@ -94,7 +94,7 @@ export default new Router({
 
 - `devDependencies`:项目打包时，不会将此节点下依赖的包打包进去，例如babel这个工具包，只是将es6的语法转化成es5的语法，在打包的时候才会使用，运行时并不会用到。
 
-### 用比喻来说明一下这个`package.json`的作用
+## 三、用比喻来说明一下这个`package.json`的作用
 **蛋糕的说明书**(纯属为了解释，请勿模仿，不然会做出黑暗料理来的哦)：
 
 **原料**：鸡蛋、牛奶、白糖、面粉 （类似`dependencies`节点的依赖，完成时，这些原料就是成品中的一部分）

@@ -8,7 +8,7 @@ location: 南昌
 ---
 
 执行下面代码即可：
-```
+``` javascript
 let value = false
 function handleFullscreen () {
       let main = document.body

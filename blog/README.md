@@ -6,6 +6,7 @@ tags:
   - Vue
 author: sifu
 location: 南昌  
+showSponsor: true
 ---
 # sifu
 

@@ -7,16 +7,16 @@ author: sifu
 location: 南昌
 ---
 
-# 一.配置电脑环境
+## 一.配置电脑环境
 
-## 1.安装[node.js](http://nodejs.cn/)
+### 1.安装[node.js](http://nodejs.cn/)
 - 检查node.js是否安装成功
   
 ![打开cmd输入node出现这个就成功了](http://upload-images.jianshu.io/upload_images/5011280-8a0afbf94891f749.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - 编辑器（个人推荐用`IDEA`或者`WebStorm`，[下载地址](https://www.jetbrains.com/)）
 
-## 2.安装cnpm（目的是为了下载依赖包更快）
+### 2.安装cnpm（目的是为了下载依赖包更快）
 
 由于我们需要使用node.js中的npm包管理工具，但是由于下载依赖包时很慢，所以使用淘宝镜像cnpm。在命令行中输入：
 
@@ -24,14 +24,16 @@ location: 南昌
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
-## 3.安装全局vue-cli（vue的脚手架工具）
+### 3.安装全局vue-cli（vue的脚手架工具）
 
 在命令行中输入：
 ``` shell script
 npm install -g @vue/cli
 ```
-# 二.使用vue-cli初始化项目
-## 1. 创建一个基于 webpack 模板的新项目
+## 二.使用vue-cli初始化项目
+
+### 1. 创建一个基于 webpack 模板的新项目
+
 新建一个空文件夹，
 
 打开命令行，使用`cd`命令，到该文件夹，并输入：
@@ -62,7 +64,7 @@ vue init webpack my-project
     Yes,use Yarn
    No,I will handle that myself
 (选择第一个，回车)
-## 2.让项目跑起来
+### 2.让项目跑起来
 等待文件下载完成后，执行：
 ``` shell script
 cd my-project

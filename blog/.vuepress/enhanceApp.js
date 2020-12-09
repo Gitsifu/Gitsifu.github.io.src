@@ -1,6 +1,9 @@
 import SomeDemo from './demo/demo'
 import RichText from './demo/rich-text'
 import VAnimated from './demo/v-animated'
+import OnEmit from './demo/on-emit/on-emit'
+import DemoChild from './demo/on-emit/demo-child'
+import DemoFather from './demo/on-emit/demo-father'
 
 export default ({
                     Vue, // VuePress 正在使用的 Vue 构造函数
@@ -12,4 +15,7 @@ export default ({
     Vue.component(SomeDemo.name, SomeDemo)
     Vue.component(RichText.name, RichText)
     Vue.component(VAnimated.name, VAnimated)
+    Vue.component(OnEmit.name, OnEmit)
+    Vue.component(DemoChild.name, DemoChild)
+    Vue.component(DemoFather.name, DemoFather)
 }

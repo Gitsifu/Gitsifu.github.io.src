@@ -13,7 +13,7 @@ location: 南昌
 
 Vue.js动画指令插件,此插件基于[animate.css4.x](https://animate.style/)和[wow.js](https://www.delac.io/wow/docs.html)实现
 
-## 下载依赖
+## 1、下载依赖
 
 > 注意：animate.css版本请使用4.x
 
@@ -21,7 +21,7 @@ Vue.js动画指令插件,此插件基于[animate.css4.x](https://animate.style/)
 npm install animate.css v-animated --save
 ```
 
-## 导入
+## 2、导入
 ``` javascript
 import Vue from 'vue'
 import 'animate.css'
@@ -37,7 +37,7 @@ Vue.use(Animated,{
      live:         true        // default
 })
 ```
-## 使用
+## 3、使用
 ``` html
 // 更多动效请查阅：https://animate.style/
 <h1 v-animated="'animate__bounce'">v-animated</h1>
@@ -45,11 +45,11 @@ Vue.use(Animated,{
 <h1 class="wow animate__bounce">v-animated</h1>
 ```
 
-## 源码仓库
+## 4、源码仓库
 
 [https://github.com/Gitsifu/v-animated](https://github.com/Gitsifu/v-animated)
 
-## 实现效果
+## 5、实现效果
 
 <ClientOnly>
   <v-animated></v-animated>

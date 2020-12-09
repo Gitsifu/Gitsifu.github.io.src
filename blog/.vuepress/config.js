@@ -49,6 +49,7 @@ module.exports = {
     //     "@assets": path.resolve(__dirname, "../assets")
     // },
     plugins: [
+        // 评论
         ['@vssue/vuepress-plugin-vssue', {
             platform,
             owner,
@@ -59,6 +60,8 @@ module.exports = {
             issueContent: ({url}) =>
                 `这个 Issue 由 Vssue 自动创建，用来存储该页面的评论：${url}`
         }],
+
+        // 图片点击放大
         ['@vuepress/medium-zoom', {
             selector: '.content__default p img',
             // medium-zoom options here
@@ -72,11 +75,13 @@ module.exports = {
             // }
         }],
 
+        // 返回顶部
         ['@vuepress/plugin-back-to-top', {}],
 
         // 自定义插件
         // [require('./plugins/plugin-back-to-top'), {}]
 
+        // 鼠标动效
         [
             //鼠标点击特效 先安装在配置， npm install vuepress-plugin-cursor-effects --save
             "cursor-effects",
@@ -87,6 +92,7 @@ module.exports = {
             }
         ],
 
+        // 动态标题
         // [
         //     //动态标题 先安装在配置， npm install vuepress-plugin-dynamic-title --save
         //     "dynamic-title",
@@ -98,6 +104,7 @@ module.exports = {
         //         recoverTime: 2000
         //     }
         // ],
+        // 看板娘插件
         [
             "@vuepress-reco/vuepress-plugin-kan-ban-niang",
             {
@@ -126,6 +133,7 @@ module.exports = {
                 height: 330,
             }
         ],
+        // 播放器插件
         // [
         //     "@vuepress-reco/vuepress-plugin-bgm-player",
         //     {
@@ -162,6 +170,7 @@ module.exports = {
         //         }
         //     }
         // ],
+        // 代码插件
         [
             "@vuepress-reco/extract-code"
         ],

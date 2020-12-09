@@ -12,7 +12,7 @@ location: 南昌
 
 `vue.config.js`文件，具体参考[文档](https://cli.vuejs.org/zh/config/#%E5%85%A8%E5%B1%80-cli-%E9%85%8D%E7%BD%AE)，以下只写出常用配置方式。  
 
-```
+``` javascript
 'use strict'
 const path = require('path')
 

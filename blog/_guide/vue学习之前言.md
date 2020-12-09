@@ -7,13 +7,13 @@ author: sifu
 location: 南昌
 ---
 
-# [vue.js](https://cn.vuejs.org/)是什么
+## [vue.js](https://cn.vuejs.org/)是什么
 ----
 ![官网截图](http://upload-images.jianshu.io/upload_images/5011280-cc58029ad3df271c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 看完一脸懵逼，哈哈，一脸懵逼就对了，简单的一句话概括就是：**vue.js是一个优秀前端框架。**
 
-# 起步
+## 起步
 ----
 在学习vue之前，你需要对以下知识有一定的了解：
 - [html](http://www.runoob.com/html/html5-intro.html)
@@ -34,7 +34,7 @@ location: 南昌
 
 ![图片来源与网络](http://upload-images.jianshu.io/upload_images/5011280-7ea2465a176e5028.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-# vue全家桶
+## vue全家桶
 - [vuex](https://vuex.vuejs.org/zh-cn/intro.html) 状态管理
 - [vue-router](https://router.vuejs.org/zh-cn/installation.html) 路由
 - [vue-axios](https://www.kancloud.cn/yunye/axios/234845) 与后台交互，vue 2.0官方推荐，在1.0时使用`vue-resource`
