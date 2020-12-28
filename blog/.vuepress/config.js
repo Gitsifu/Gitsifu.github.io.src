@@ -202,6 +202,10 @@ module.exports = {
                 link: '/writings/',
             },
             {
+                text: '链接',
+                link: '/link/',
+            },
+            {
                 text: '标签',
                 link: '/tag/',
             },
@@ -263,6 +267,21 @@ module.exports = {
                 //     lengthPerPage: 10,
                 // },
             },
+            // {
+            //     id: 'link', // Unique id for current classifier
+            //     dirname: '_link', // Matched directory name
+            //     path: '/link/', // Entry page for current classifier
+            //     title: '链接', // Entry and pagination page titles for current classifier.
+            //     layout: 'IndexWriting', // Layout component name for entry page.
+            //     frontmatter: { //Front matter for entry page.
+            //         tag: 'vuepress'
+            //     },
+            //     itemLayout: 'Writing', // Layout for matched pages.
+            //     itemPermalink: '/link/:slug', // Permalink for matched pages.   /writings/:year/:month/:day/:slug
+            //     // pagination: { // Pagination behavior
+            //     //     lengthPerPage: 10,
+            //     // },
+            // },
         ]
     },
 }
