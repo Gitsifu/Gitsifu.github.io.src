@@ -206,7 +206,7 @@ module.exports = {
                 link: '/link/',
             },
             {
-                text: '秘籍列表',
+                text: '秘籍标签',
                 link: '/tag/',
             },
         ],

@@ -24,6 +24,8 @@
 
 [better-scroll](https://github.com/ustbhuangyi/better-scroll):BetterScroll是一个插件，旨在解决移动端的滚动情况（已支持PC）。核心灵感来自iscroll的实现，因此BetterScroll的API总体上与iscroll兼容。此外，BetterScroll还扩展了某些功能，并基于iscroll优化了性能。
 
+[lodash](https://github.com/lodash/lodash):Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库。[官网](https://www.lodashjs.com/)
+
 ## css样式库
 
 [tailwindcss](https://tailwindcss.com/)：无需编写css，即可高度自定义编写出优美界面的css库
@@ -31,6 +33,8 @@
 [tailwindgrids](https://tailwindgrids.com/#/)：生成基于tailwindcss的grids布局网站
 
 [Animate.css](https://animate.style/):css动画样式库
+
+[NES.css](https://github.com/nostalgic-css/NES.css):是一个NES样式（类似小时候小霸王游戏里的字体）的CSS框架。[官网](https://nostalgic-css.github.io/NES.css/#)
 
 ## 微信小程序
 
@@ -54,7 +58,7 @@
 
 [Vant Use](https://youzan.github.io/vant/vant-use/):Vant Use 是 Vant 团队提供的 Vue Composition API 库。
 
-[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper): Swipe 轮播
+[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper): Swipe 轮播（**你想要的轮播基本都有**）
 
 [vuescroll](https://github.com/YvesCoding/vuescroll): 一个基于vue.js的可自定义的滚动条插件，适用于PC，手机，触摸屏，笔记本电脑。
 
