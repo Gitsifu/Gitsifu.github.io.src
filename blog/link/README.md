@@ -1,3 +1,5 @@
+> 此处收集一些个人觉得有意思，实用的东西
+
 ## Vue组件库
 
 [element-ui](https://element.eleme.cn/#/zh-CN)：Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库
@@ -32,11 +34,13 @@
 
 ## 微信小程序
 
+[vant weapp](https://github.com/youzan/vant-weapp):轻量、可靠的小程序 UI 组件库
+
 [ColorUI](https://github.com/weilanwl/ColorUI):鲜亮的高饱和色彩，专注视觉的小程序组件库
 
 ## 富文本编辑器
 
-[quill](https://github.com/quilljs/quill)
+[quill](https://github.com/quilljs/quill):web富文本编辑器
 
 [wangeditor](http://www.wangeditor.com/)：轻量级web富文本框
 
@@ -47,3 +51,11 @@
 [electron-vue](https://github.com/SimulatedGREG/electron-vue):electron + vue构建桌面应用
 
 [ice](https://github.com/alibaba/ice):飞冰，简单而友好的前端研发体系 
+
+[Vant Use](https://youzan.github.io/vant/vant-use/):Vant Use 是 Vant 团队提供的 Vue Composition API 库。
+
+[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper): Swipe 轮播
+
+[vuescroll](https://github.com/YvesCoding/vuescroll): 一个基于vue.js的可自定义的滚动条插件，适用于PC，手机，触摸屏，笔记本电脑。
+
+[v-contextmenu](https://github.com/heynext/v-contextmenu): 基于Vue 2.0的ContextMenu

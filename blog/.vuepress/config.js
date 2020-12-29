@@ -1,7 +1,7 @@
 const path = require("path");
 
-const PLATFORM = 'gitee'
-// const PLATFORM = 'github'
+// const PLATFORM = 'gitee'
+const PLATFORM = 'github'
 
 const platformConfig = {
     github: {
@@ -198,15 +198,15 @@ module.exports = {
                 link: '/guide/',
             },
             {
-                text: '随笔',
+                text: '遨游江湖',
                 link: '/writings/',
             },
             {
-                text: '链接',
+                text: '藏宝阁',
                 link: '/link/',
             },
             {
-                text: '标签',
+                text: '秘籍列表',
                 link: '/tag/',
             },
         ],
