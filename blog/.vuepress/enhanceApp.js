@@ -1,4 +1,5 @@
 import SomeDemo from './demo/demo'
+import FontZpix from './demo/font-zpix'
 import RichText from './demo/rich-text'
 import VAnimated from './demo/v-animated'
 import OnEmit from './demo/on-emit/on-emit'
@@ -13,6 +14,7 @@ export default ({
                     isServer // 当前应用配置是处于 服务端渲染 或 客户端
                 }) => {
     Vue.component(SomeDemo.name, SomeDemo)
+    Vue.component(FontZpix.name, FontZpix)
     Vue.component(RichText.name, RichText)
     Vue.component(VAnimated.name, VAnimated)
     Vue.component(OnEmit.name, OnEmit)

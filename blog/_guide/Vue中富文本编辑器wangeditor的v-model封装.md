@@ -183,6 +183,7 @@ export default {
 
 <ClientOnly>
   <rich-text></rich-text>
+  <font-zpix></font-zpix>
 </ClientOnly>
 
 <Vssue :title="$title" />

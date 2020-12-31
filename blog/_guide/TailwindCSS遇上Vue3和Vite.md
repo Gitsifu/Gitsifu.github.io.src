@@ -1,6 +1,6 @@
 ---
 title: TailwindCSS遇上Vue3和Vite
-date: 2020-11-29
+date: 2020-12-29
 tags: 
   - Vue3
   - Vite
@@ -15,6 +15,12 @@ location: 南昌
 它和 [bootstrap](https://www.bootcss.com/) 不一样，Tailwind CSS是更加细粒度的css。
 为用户提供了更多的定制化空间。
 
+个人觉得，Tailwind CSS配合Vue第三方组件进行开发后台管理项目非常合适，第三方组件库负责主要布局，
+Tailwind CSS负责进行样式微调。
+
+如果是开发定制化比较高的网站，第三方组件库无法满足开发需求的时候，Tailwind CSS就是一个不错的选择。
+无需重复写css样式，直接添加class，打包出来的文件大小也会相应的小很多。
+同时Tailwind CSS提供了响应式布局，变更主题，暗主题等解决方案，做出一个高品质的网站不成问题
 
 ## 1、创建项目
 
