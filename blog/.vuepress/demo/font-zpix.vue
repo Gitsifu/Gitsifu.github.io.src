@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import "nes.css/css/nes.min.css";
 export default {
     name: "font-zpix",
     data() {
