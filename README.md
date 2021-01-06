@@ -7,6 +7,14 @@ github：[http://gitsifu.github.io](http://gitsifu.github.io)
 
 国内镜像gitee：[https://sifu.gitee.io/blog/](https://sifu.gitee.io/blog/)
 
+## 下载依赖
+
+```
+npm install 
+// 或者
+yarn
+```
+
 ## 选择环境
 `blog/.vuepress/config.js`文件
 ```
