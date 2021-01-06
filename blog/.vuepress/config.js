@@ -108,7 +108,7 @@ module.exports = {
         [
             "@vuepress-reco/vuepress-plugin-kan-ban-niang",
             {
-                theme: ['miku', 'blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'z16'],
+                theme: ['z16', 'miku', 'blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko'],
                 clean: false,
                 messages: {
                     welcome: '欢迎来到sifu',
@@ -230,7 +230,7 @@ module.exports = {
                     link: 'https://policies.google.com/privacy?hl=en-US',
                 },
                 {
-                    text: 'MIT Licensed | Copyright © 2020-present sifu',
+                    text: 'MIT Licensed | Copyright © 2016-present sifu',
                 },
             ],
         },

@@ -1,6 +1,6 @@
 ---
 title: 浏览器设置全屏js代码实现
-date: 2020-11-27
+date: 2018-09-19
 tags: 
   - JavaScript
 author: sifu

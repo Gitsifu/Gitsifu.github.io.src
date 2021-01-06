@@ -1,6 +1,6 @@
 ---
 title: 无缝跑马灯实现(非marquee)
-date: 2020-11-27
+date: 2019-04-22
 tags: 
   - Vue
   - marquee

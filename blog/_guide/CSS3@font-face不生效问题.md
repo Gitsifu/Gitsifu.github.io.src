@@ -11,7 +11,7 @@ location: 南昌
 
 ## 1、加载字体
 
-**注意：字体文件名称 `zpix` 和 `font-family`中的值 `zpix` 需要一致**
+**注意：字体文件名称 `zpix` 和 `font-family`中的值 `'zpix'` 需要一致**
 
 ```css
 @font-face {

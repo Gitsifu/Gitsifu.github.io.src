@@ -1,6 +1,6 @@
 ---
 title: vue中富文本编辑器wangeditor@4.x的v-model封装
-date: 2020-11-27
+date: 2020-08-05
 tags: 
   - JavaScript
   - Vue

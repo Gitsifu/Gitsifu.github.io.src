@@ -2,8 +2,7 @@
 title: 首页
 date: 2020-01-11
 tags: 
-  - JavaScript
-  - Vue
+  - 首页
 author: sifu
 location: 南昌  
 showSponsor: true
