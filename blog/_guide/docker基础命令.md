@@ -66,7 +66,7 @@ docker rm -f [容器id或者容器name]
 - 删除镜像
 
 ```shell script
-dokcer rmi [镜像id，可以同时删除多个，每个用空格隔开]
+dokcer rmi [镜像id,可以同时删除多个,每个用空格隔开]
 ```
 
 - 配置数据卷和端口号
