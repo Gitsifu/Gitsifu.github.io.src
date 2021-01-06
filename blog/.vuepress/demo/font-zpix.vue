@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @font-face {
     font-family: 'zpix';
     src: url('/blog/assets/font/zpix.ttf') format('truetype');
