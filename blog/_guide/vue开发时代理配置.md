@@ -2,9 +2,9 @@
 title: vue开发时代理配置
 date: 2021-03-11
 tags:
-- Vue
-  author: sifu
-  location: 南昌
+  - Vue
+author: sifu
+location: 南昌
 ---
 
 > **推荐阅读**：[vue多页面开发部署nginx配置](/guide/vue多页面开发部署nginx配置)
