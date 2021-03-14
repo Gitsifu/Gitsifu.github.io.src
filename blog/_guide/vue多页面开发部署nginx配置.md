@@ -8,8 +8,20 @@ author: sifu
 location: 南昌
 ---
 
+> 阅读此文章前，可以先看 [vue多页面开发配置](/guide/vue多页面开发配置)
 
-- 部署nginx配置
+- 当 `axios` 的 `baseUrl` 为 `/prod-api` 时
+
+```javascript
+import axios from 'axios'
+
+axios.create({
+  baseURL: '/prod-api'
+})
+```
+
+
+- 部署vue项目的nginx配置
 
 ```
 # 精准匹配 '/' 重定向到pc页面
@@ -26,7 +38,7 @@ location ^~ /m {
 }
 
 # 接口代理配置
-location /pro-api/ {
+location /prod-api/ {
   # 修改此处目标域名
   proxy_pass http://app.com/;
   proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;

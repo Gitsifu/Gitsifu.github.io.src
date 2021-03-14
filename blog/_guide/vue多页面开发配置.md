@@ -7,6 +7,8 @@ author: sifu
 location: 南昌
 ---
 
+> 了解更多: [vue部署nginx配置](/guide/vue多页面开发部署nginx配置)
+
 ## 一、多页面开发适用场景
 
 在开发前端的时候，有时候会要开发一套pc端的系统，同时需要开发一套移动端系统，而两套系统功能差不多，但是又无法通过
@@ -239,9 +241,49 @@ new Vue({
 - `http://localhost:8080/pc` 访问pc端路由页面
 - `http://localhost:8080/mobile` 访问移动端路由页面
 
-## 四、示例项目GitHub地址
+## 四、部署
+
+部署根据不同的路由模式，**部署方式也有不同，同时访问的路径也有差异**
+
+1、`hash` 模式
+
+`nginx` 无需配置
+
+访问地址：
+
+- pc端：http://example.com/pc.html#/
+- 移动端：http://example.com/mobile.html#/
+
+2、`history` 模式下 `nginx` 配置
+
+```
+# 精准匹配 '/' 重定向到pc页面，即访问pc.html文件
+location = / {
+  rewrite / /pc permanent;
+}
+# 匹配以 '/pc' 开头，访问pc.html文件
+location ^~ /pc {
+  try_files $uri $uri/ /pc.html;
+}
+# 匹配以 '/mobile' 开头，访问mobile.html文件
+location ^~ /m {
+  try_files $uri $uri/ /mobile.html;
+}
+```
+
+访问地址：
+
+- pc端：http://example.com/pc
+- 移动端：http://example.com/mobile
+
+
+
+## 五、示例项目GitHub地址
 
 github: [https://github.com/Gitsifu/vue-multiple-page](https://github.com/Gitsifu/vue-multiple-page)
+
+
+
 
 
 
