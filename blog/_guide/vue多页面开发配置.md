@@ -238,23 +238,27 @@ new Vue({
 ## 三、如何访问
 
 项目启动后，浏览器打开
+
 - `http://localhost:8080/pc` 访问pc端路由页面
+  
 - `http://localhost:8080/mobile` 访问移动端路由页面
 
 ## 四、部署
 
-部署根据不同的路由模式，**部署方式也有不同，同时访问的路径也有差异**
+> 部署根据不同的路由模式，**部署方式也有不同，同时访问的路径也有差异**
 
-1、`hash` 模式
+### 1、`hash` 模式
 
 `nginx` 无需配置
 
 访问地址：
 
-- pc端：http://example.com/pc.html#/
-- 移动端：http://example.com/mobile.html#/
+- pc端：`http://example.com/pc.html#/`
+- 移动端：`http://example.com/mobile.html#/`
 
-2、`history` 模式下 `nginx` 配置
+### 2、`history` 模式
+
+`nginx` 配置
 
 ```
 # 精准匹配 '/' 重定向到pc页面，即访问pc.html文件
