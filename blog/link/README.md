@@ -21,6 +21,12 @@ location: 南昌
 
 [Vue.Draggable](https://github.com/SortableJS/Vue.Draggable): 基于[Sortable.js](https://github.com/SortableJS/Sortable)的Vue拖放组件
 
+[svgicon](https://github.com/MMF-FE/svgicon): SVG 图标组件和工具集 [官网](https://mmf-fe.github.io/svgicon/)
+
+[vue-luck-draw](https://github.com/LuckDraw/vue-luck-draw): 一个基于 vue2 / vue3 的【大转盘 / 九宫格】抽奖插件，基于[lucky-canvas](https://github.com/LuckDraw/lucky-canvas)
+
+[vue-baberrage](https://github.com/superhos/vue-baberrage): 基于Vue.js弹幕插件.
+
 ## Vue指令
 
 [v-animated](https://github.com/Gitsifu/v-animated): Vue.js2.X动画指令插件,此插件基于animate.css4.x和wow.js实现
@@ -36,6 +42,10 @@ location: 南昌
 [better-scroll](https://github.com/ustbhuangyi/better-scroll): BetterScroll是一个插件，旨在解决移动端的滚动情况（已支持PC）。核心灵感来自iscroll的实现，因此BetterScroll的API总体上与iscroll兼容。此外，BetterScroll还扩展了某些功能，并基于iscroll优化了性能。
 
 [lodash](https://github.com/lodash/lodash): Lodash 是一个一致性、模块化、高性能的 JavaScript 实用工具库。[官网](https://www.lodashjs.com/)
+
+[mitt](https://github.com/developit/mitt): 事件分发，监听触发工具库
+
+[move.js](https://github.com/visionmedia/move.js): CSS3 JavaScript动画框架。
 
 ## css样式库
 
@@ -86,6 +96,15 @@ location: 南昌
 [vuepress](https://github.com/vuejs/vuepress): Vue提供的静态站点生成器。
 
 [vitepress](https://github.com/vuejs/vitepress): Vite＆Vue提供的静态站点生成器。与vuepress的区别是，vitepress更快。
+
+## 其他
+
+[cool-admin-midway](https://github.com/cool-team-official/cool-admin-midway): cool-admin(midway版)一个很酷的后台权限管理框架，模块化、插件化、CRUD极速开发，永久开源免费，基于midway.js 2.0、typeorm、mysql、jwt、element-ui等构建
+
+[cool-admin-vue](https://github.com/cool-team-official/cool-admin-vue): cool-admin一个很酷的后台权限管理框架，模块化、插件化、CRUD极速开发，永久开源免费，基于midway.js 2.0、typeorm、mysql、jwt、element-ui、vuex、vue-router、vue等构建
+
+[recorder](https://github.com/2fps/recorder): html5 js 浏览器 web端录音
+
 
 
 <Vssue :title="$title" />
