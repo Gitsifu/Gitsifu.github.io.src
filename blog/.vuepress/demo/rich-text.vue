@@ -2,6 +2,10 @@
     <div>
         <div :ref="toolId" class="toolbar"></div>
         <div :ref="editorId" class="text"></div> <!--可使用 min-height 实现编辑区域自动增加高度-->
+
+        <hr/>
+        <div>CODE：</div>
+        <pre><code>{{ content }}</code></pre>
     </div>
 </template>
 
