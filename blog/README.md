@@ -9,8 +9,6 @@ showSponsor: true
 ---
 # sifu
 
-> 有些人二十几岁就死了，到老了才埋
-
 这个博主有点懒，首页暂时没有什么可看的~
 
 <RecoDemo>
