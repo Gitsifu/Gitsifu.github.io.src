@@ -15,30 +15,21 @@ npm install
 yarn
 ```
 
-## 选择环境
-`blog/.vuepress/config.js`文件
-```
-// gitee
-const PLATFORM = 'gitee'
-
-// github
-// const PLATFORM = 'github'
-```
-
 ## 开发
 
 运行命令
 ```
-npm run blog:dev
+npm run blog:gitee:dev
+
+npm run blog:github:dev
 ```
 
 ## 部署
 
-执行`deploy-gitee.sh` 或 `deploy.github.sh`脚本
 ```
-./deploy-gitee.sh
+npm run blog:gitee:publish
 
-./deploy-github.sh
+npm run blog:github:publish
 ```
 
 **注意**：gitee部署完之后，需要到`仓库`>`服务`>`Gitee Pages`中更新服务（github部署不需要）

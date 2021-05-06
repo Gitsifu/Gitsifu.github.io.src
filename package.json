@@ -4,8 +4,11 @@
   "description": "blog",
   "main": "index.js",
   "scripts": {
-    "blog:dev": "vuepress dev blog",
-    "blog:build": "vuepress build blog"
+    "blog:gitee:dev": "cross-env PLATFORM=gitee vuepress dev blog",
+    "blog:github:dev": "cross-env PLATFORM=github vuepress dev blog",
+    "blog:build": "vuepress build blog",
+    "blog:gitee:publish": "cross-env PLATFORM=gitee sh deploy-gitee.sh",
+    "blog:github:publish": "cross-env PLATFORM=github sh deploy-github.sh"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
     "@vuepress/plugin-medium-zoom": "^1.7.1",
     "@vuepress/theme-blog": "^2.3.3",
     "animate.css": "^4.1.1",
+    "cross-env": "^7.0.3",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vuepress": "^1.7.1",

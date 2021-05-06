@@ -1,7 +1,6 @@
 const path = require("path");
 
-const PLATFORM = 'gitee'
-// const PLATFORM = 'github'
+const PLATFORM = process.env.PLATFORM
 
 const platformConfig = {
     github: {
