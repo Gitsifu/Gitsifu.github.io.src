@@ -61,8 +61,6 @@ class Sun2 extends React.Component {
 
 ## 二、 使用第三方库 `pubsub-js` 消息订阅-消息发布
 
-GitHub仓库地址：[pubsub-js](https://github.com/mroderick/PubSubJS)
-
 ### 1、下载依赖
 
 ```shell
@@ -76,4 +74,10 @@ npm install pubsub-js -S
 - `PubSub.unSubscribe('change')`
 
 具体api请看GitHub官网描述
+
+GitHub仓库地址：[pubsub-js](https://github.com/mroderick/PubSubJS)
+
+---
+
+> **扩展**：类似的库还有 `mitt` [GitHub仓库地址](https://github.com/developit/mitt)
 

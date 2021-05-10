@@ -8,7 +8,7 @@ author: sifu
 location: 杭州
 ---
 
-> 在react官网，并没有提到 **插槽** 的概念，此处只是把 `Vue` 的插槽概念引入，并解释如何在react中实现Vue中的插槽
+> 在react官网，并没有提到 **插槽** 的概念，此处只是把 `Vue` 的插槽概念引入，并解释如何在react中实现Vue中的插槽效果
 
 - 前提知识：react在子组件中获取父组件传递过来的插槽内容，使用 `this.props.children` 获取
 它包含组件的开始标签和结束标签之间的内容。
@@ -69,10 +69,11 @@ function Sun(props) {
 }
 ```
 
-## 三、通过传递pros方式实现
+## 三、通过传递props方式实现
 
 - 思路：上面使用的是使用 `children` 进行传递插槽内容，
-实际上我们也可以使用 `props` 进行插槽内容的传递
+  实际上我们也可以使用 `props` 进行插槽内容的传递。 
+  **记住：一切皆对象**
 
 ```jsx
 function Father(props) {
