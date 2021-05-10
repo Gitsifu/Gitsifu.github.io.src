@@ -105,6 +105,10 @@ location: 南昌
 
 [recorder](https://github.com/2fps/recorder): html5 js 浏览器 web端录音
 
+[single-spa](https://zh-hans.single-spa.js.org/): Single-spa 是一个将多个单页面应用聚合为一个整体应用的 JavaScript 微前端框架。
 
+[微前端架构](https://juejin.cn/post/6844903943873675271): 每日优鲜供应链前端团队微前端改造 [扩展阅读](https://www.jianshu.com/p/54904acb5896)
+
+[前端微服务示例项目仓库](https://github.com/joeldenning/coexisting-vue-microfrontends)
 
 <Vssue :title="$title" />
