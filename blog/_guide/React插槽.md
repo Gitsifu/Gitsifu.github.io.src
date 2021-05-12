@@ -96,3 +96,87 @@ function Sun(props) {
     )
 }
 ```
+
+## 四、通过renderProps实现
+
+> 实际上是是给父组件传递一个 `props` ， `key` 为 `render` 的函数，
+> 在此函数中返回一个子组件，在父组件中调用 `props.render()` 函数之后
+> 的到子组件
+
+- 思路：在父组件被 `使用` 的时候，传递一个 `props` 的回调函数进去，此函数由
+  父组件决定何时调用
+
+### 1、不传参
+
+```jsx
+function App(props){
+    return (
+        <div>
+          <Father render={() => {<Sun/>}}/>
+        </div>
+    )
+}
+
+function Father(props) {
+    return (
+        <div>
+          我是父组件的内容
+          {props.render()}
+        </div>
+    )
+}
+
+function Sun(props) {
+    return (
+        <div>
+            我是子组件内容
+        </div>
+    )
+}
+```
+
+### 2、传递参数
+
+```jsx
+function App(props){
+    return (
+        <div>
+          {/*在使用父组件的时候，还可以给子组件传递props*/}
+          <Father render={({title,content}) => {<Sun title content/>}}/>
+        </div>
+    )
+}
+
+function Father(props) {
+    const title = '我是父组件的title值'
+    const content = '我是父组件的content值'
+    return (
+        <div>
+            我是父组件的内容
+          {props.render({title,content})}
+        </div>
+    )
+}
+
+function Sun(props) {
+    return (
+        <div>
+          我是子组件内容
+          {props.title}
+          {props.content}
+        </div>
+    )
+}
+```
+
+> **注意** ：三、四 这两种方式实际上差不多，但有区别。
+> 
+> 【三】是在 `定义` 父组件的时候
+> 就直接 `使用` 子组件，同时把插槽内容通过 `props` 传递给子组件。
+> 
+> 【四】是在 `使用` 父组件的时候，给父组件传递一个 `props` 为 `render` 的回调函数，
+> 然后由父组件决定在何处调用 `props.render()` 函数，同时可给 `render` 传递参数。
+
+> 解释：此处所传递的 `props` 是一个叫做 `render` 的函数，请不要认为必须要叫做
+> `render` ，不要和类组件中的 `render` 函数混淆了。此处仅仅只是传递一个普通函数，
+> 叫什么名称都行。
