@@ -1,5 +1,5 @@
 ---
-title: React组件三大核心属性：ref
+title: React组件三大核心属性ref
 date: 2021-05-10
 tags:
   - React
