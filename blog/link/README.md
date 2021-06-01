@@ -115,4 +115,6 @@ location: 南昌
 
 [前端微服务示例项目仓库](https://github.com/joeldenning/coexisting-vue-microfrontends)
 
+[qiankun](https://github.com/umijs/qiankun): qiankun 是一个基于 [single-spa](https://github.com/single-spa/single-spa) 的 [微前端](https://micro-frontends.org/) 实现库，旨在帮助大家能更简单、无痛的构建一个生产可用微前端架构系统。
+
 <Vssue :title="$title" />

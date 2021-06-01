@@ -4,29 +4,29 @@ date: 2021-05-28
 tags:
   - webpack
 author: sifu
-location: 南昌
+location: 杭州
 ---
-
-> 原文链接：https://blog.csdn.net/u012961419/article/details/107094111
 
 MiniCssExtractPlugin 提取 CSS 到单个文件
 目前示例中webpack使用css方式：
 
-css-loader：将js中的css内容解析
-style-loader：最终将css样式通过<style>标签方式注入到页面中。
+1、css-loader：将js中的css内容解析
+
+2、style-loader：最终将css样式通过`<style>`标签方式注入到页面中。 
+
 CSS内容还是存储在JS文件中。
 
 MiniCssExtractPlugin 插件可以将CSS内容从打包结果中提取出来，存放到文件中。
 
 通过这个插件，就可以实现CSS模块的按需加载。
 
-因为提取后生成了css文件，所以就不需要<style>标签，而是直接通过<link>的方式引入。
+因为提取后生成了css文件，所以就不需要`<style>`标签，而是直接通过<link>的方式引入。
 
 所以使用MiniCssExtractPlugin，就不需要style-loader，而是使用插件提供的loader实现通过<link>标签的方式注入。
 
 安装
 
-```
+```shell
 yarn add mini-css-extract-plugin --dev
 ```
 
@@ -192,6 +192,8 @@ module.exports = {
 }
 ```
 
-————————————————
-版权声明：本文为CSDN博主「皮蛋很白」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/u012961419/article/details/107094111
+---
+
+> 版权声明：本文为CSDN博主「皮蛋很白」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+> 
+> 原文链接：https://blog.csdn.net/u012961419/article/details/107094111
