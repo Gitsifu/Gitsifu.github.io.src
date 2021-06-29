@@ -57,6 +57,8 @@ location: 南昌
 
 [NES.css](https://github.com/nostalgic-css/NES.css): 是一个NES样式（类似小时候小霸王游戏里的字体）的CSS框架。[官网](https://nostalgic-css.github.io/NES.css/#)
 
+[magicpattern](https://www.magicpattern.design/tools/css-backgrounds?ref=producthunt): css背景图案
+
 ## 微信小程序
 
 [vant weapp](https://github.com/youzan/vant-weapp): 轻量、可靠的小程序 UI 组件库
