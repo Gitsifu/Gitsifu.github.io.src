@@ -59,6 +59,8 @@ location: 南昌
 
 [magicpattern](https://www.magicpattern.design/tools/css-backgrounds?ref=producthunt): css背景图案
 
+[css_tricks](https://github.com/QiShaoXuan/css_tricks): 一些 CSS 常用样式(例如：[小于 12px 的文字生成器](https://qishaoxuan.github.io/css_tricks/smallFont/))
+
 ## 微信小程序
 
 [vant weapp](https://github.com/youzan/vant-weapp): 轻量、可靠的小程序 UI 组件库
