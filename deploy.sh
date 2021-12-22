@@ -6,8 +6,19 @@ set -e
 echo '选择发布的环境'
 
 select platform in 'gitee' 'github'; do
-  echo '你选择了' $platform
-  break
+  case $platform in
+  'gitee')
+    echo '你选择了' $platform
+    break
+    ;;
+  'github')
+    echo '你选择了' $platform
+    break
+    ;;
+  *)
+    echo '输入错误，请重新输入'
+    ;;
+  esac
 done
 
 # 生成静态文件
