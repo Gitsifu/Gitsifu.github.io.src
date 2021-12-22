@@ -19,17 +19,13 @@ yarn
 
 运行命令
 ```
-npm run gitee:dev
-
-npm run github:dev
+npm run dev
 ```
 
 ## 部署
 
 ```
-npm run gitee:publish
-
-npm run github:publish
+npm run deploy
 ```
 
 **注意**：gitee部署完之后，需要到`仓库`>`服务`>`Gitee Pages`中更新服务（github部署不需要）

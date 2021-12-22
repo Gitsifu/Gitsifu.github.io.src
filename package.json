@@ -4,11 +4,9 @@
   "description": "blog",
   "main": "index.js",
   "scripts": {
-    "gitee:dev": "cross-env PLATFORM=gitee vuepress dev blog",
-    "github:dev": "cross-env PLATFORM=github vuepress dev blog",
-    "build": "vuepress build blog",
-    "gitee:publish": "cross-env PLATFORM=gitee sh deploy-gitee.sh",
-    "github:publish": "cross-env PLATFORM=github sh deploy-github.sh"
+    "dev": "sh dev.sh",
+    "build": "sh build.sh",
+    "deploy": "sh deploy.sh"
   },
   "repository": {
     "type": "git",
