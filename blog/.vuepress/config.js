@@ -225,12 +225,11 @@ module.exports = {
             // 右下角版权信息
             copyright: [
                 {
-                    text: '隐私政策',
-                    link: 'https://policies.google.com/privacy?hl=en-US',
-                },
-                {
                     text: 'MIT Licensed | Copyright © 2016-present sifu',
                 },
+                {
+                    text: 'ICP备案/许可证号：赣ICP备2022010853号-1'
+                }
             ],
         },
 
