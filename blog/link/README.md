@@ -107,6 +107,8 @@ location: 南昌
 
 [vitepress](https://github.com/vuejs/vitepress): Vite＆Vue提供的静态站点生成器。与vuepress的区别是，vitepress更快。
 
+[ttsmaker](https://ttsmaker.com/): 这是一个在线文本到语音转换工具，可以将输入的文本转换为语音，并以MP3文件的形式下载。用户可以选择不同的语音、语速和音调选项来生成自定义的语音文件。该工具也提供了一些高级选项，如设置发音人、添加语音效果等。
+
 ## 其他
 
 [cool-admin-midway](https://github.com/cool-team-official/cool-admin-midway): cool-admin(midway版)一个很酷的后台权限管理框架，模块化、插件化、CRUD极速开发，永久开源免费，基于midway.js 2.0、typeorm、mysql、jwt、element-ui等构建
