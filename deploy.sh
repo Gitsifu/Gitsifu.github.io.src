@@ -33,10 +33,10 @@ git commit -m 'deploy'
 
 if [ $platform == 'gitee' ]; then
   echo '正在部署gitee...'
-  git push -f git@gitee.com:sifu/blog.git master
+  git push -f git@gitee.com:sifu/blog.git HEAD:master
 elif [ $platform == 'github' ]; then
   echo '正在部署github...'
-  git push -f git@github.com:Gitsifu/Gitsifu.github.io.git master
+  git push -f git@github.com:Gitsifu/Gitsifu.github.io.git HEAD:master
 fi
 
 echo '部署成功'
