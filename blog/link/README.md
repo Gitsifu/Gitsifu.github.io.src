@@ -125,4 +125,14 @@ location: 南昌
 
 [qiankun](https://github.com/umijs/qiankun): qiankun 是一个基于 [single-spa](https://github.com/single-spa/single-spa) 的 [微前端](https://micro-frontends.org/) 实现库，旨在帮助大家能更简单、无痛的构建一个生产可用微前端架构系统。
 
+## 机器学习 | 人工智能
+
+[《动手学深度学习》](https://zh.d2l.ai/): 面向中文读者的能运行、可讨论的深度学习教科书,含 PyTorch、NumPy/MXNet、TensorFlow 和 PaddlePaddle 实现 ,被全球 60 多个国家 400 多所大学用于教学
+
+[chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web): 用 Express 和 Vue3 搭建的 ChatGPT 演示网页
+
+[yolov5](https://github.com/ultralytics/yolov5): YOLOv5🚀是世界上最受欢迎的视觉AI，代表了Ultralytics对未来视觉AI方法的开源研究，结合了在数千小时的研发中获得的经验教训和最佳实践。
+
+[kaggle](https://www.kaggle.com/): 一个数据科学和机器学习竞赛平台，提供了许多公共数据集、notebook 和比赛项目。Kaggle上的竞赛项目可以让数据科学家和机器学习工程师们共同解决各种问题，并且可以通过竞赛获得奖金和声誉。此外，Kaggle还提供了许多数据科学和机器学习相关的课程和资源，可以帮助初学者学习和提高数据科学和机器学习技能。
+
 <Vssue :title="$title" />
