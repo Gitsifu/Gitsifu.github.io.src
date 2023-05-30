@@ -125,6 +125,8 @@ location: 南昌
 
 [qiankun](https://github.com/umijs/qiankun): qiankun 是一个基于 [single-spa](https://github.com/single-spa/single-spa) 的 [微前端](https://micro-frontends.org/) 实现库，旨在帮助大家能更简单、无痛的构建一个生产可用微前端架构系统。
 
+[nativefier](https://github.com/nativefier/nativefier): 将任何网页生成为桌面应用
+
 ## 机器学习 | 人工智能
 
 [《动手学深度学习》](https://zh.d2l.ai/): 面向中文读者的能运行、可讨论的深度学习教科书,含 PyTorch、NumPy/MXNet、TensorFlow 和 PaddlePaddle 实现 ,被全球 60 多个国家 400 多所大学用于教学
