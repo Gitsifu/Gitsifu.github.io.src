@@ -41,3 +41,5 @@ Vue.directive('debounce', {
 
 <button @click="sayHello" v-debounce="1000">提交</button>
 ```
+
+<Vssue :title="$title" />

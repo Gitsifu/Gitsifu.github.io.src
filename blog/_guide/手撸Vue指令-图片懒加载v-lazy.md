@@ -106,3 +106,5 @@ export default LazyLoad;
 ```
 <img v-lazy="http://example.com/1.png"/>
 ```
+
+<Vssue :title="$title" />

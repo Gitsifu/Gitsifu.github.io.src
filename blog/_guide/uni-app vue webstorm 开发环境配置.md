@@ -64,3 +64,5 @@ module.exports = {
 ```
 
 然后在preferences > Languages & Frameworkes > JavaScript > Webpack中的webpack configuration file设置为alias.config.js，然后点击apply，再看main.js，很好，识别了，可以链接过去了。
+
+<Vssue :title="$title" />

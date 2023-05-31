@@ -180,3 +180,5 @@ function Sun(props) {
 > 解释：此处所传递的 `props` 是一个叫做 `render` 的函数，请不要认为必须要叫做
 > `render` ，不要和类组件中的 `render` 函数混淆了。此处仅仅只是传递一个普通函数，
 > 叫什么名称都行。
+
+<Vssue :title="$title" />

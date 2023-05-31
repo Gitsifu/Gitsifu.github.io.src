@@ -73,3 +73,4 @@ class Demo extends React.Component {
 
 > 注意：此处的 `myRef` 需要使用 `myRef.current` 才能获取到当前dom元素
 
+<Vssue :title="$title" />

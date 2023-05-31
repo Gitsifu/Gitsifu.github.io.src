@@ -96,3 +96,5 @@ createApp(App).mount('#app')
 ```
 
 大功告成！现在，当您运行时 `npm run dev` ，可以在Vue 3和Vite项目中使用Tailwind CSS。
+
+<Vssue :title="$title" />

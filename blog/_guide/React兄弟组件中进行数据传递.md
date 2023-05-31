@@ -81,3 +81,4 @@ GitHub仓库地址：[pubsub-js](https://github.com/mroderick/PubSubJS)
 
 > **扩展**：类似的库还有 `mitt` [GitHub仓库地址](https://github.com/developit/mitt)
 
+<Vssue :title="$title" />

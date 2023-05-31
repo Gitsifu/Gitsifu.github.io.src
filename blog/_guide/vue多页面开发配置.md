@@ -286,8 +286,6 @@ location ^~ /mobile {
 
 github: [https://github.com/Gitsifu/vue-multiple-page](https://github.com/Gitsifu/vue-multiple-page)
 
-
-
-
+<Vssue :title="$title" />
 
 

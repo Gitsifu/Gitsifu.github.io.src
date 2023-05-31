@@ -44,3 +44,5 @@ module.exports = function (app) {
 
 > 总结：使用 `package.json` 只能配置一个代理，无法配置复杂的代理。
 > 如果需要配置复杂的代理，就使用 `setupProxy.js` 进行配置。
+
+<Vssue :title="$title" />

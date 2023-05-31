@@ -64,3 +64,5 @@ export default vCopy;
 ```vue
 <div v-copy>hello world</div>
 ```
+
+<Vssue :title="$title" />
