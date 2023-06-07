@@ -30,7 +30,19 @@ module.exports = {
     head:[
         ['link',{rel:'icon',href:'/favicon.ico'}],
         // 防图片盗链解决方案 https://github.com/biaochenxuying/blog/issues/31
-        ['meta',{name: 'referrer', content: 'never'}]
+        ['meta',{name: 'referrer', content: 'never'}],
+        // 百度统计
+        [
+          'script',
+          {},
+          `var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?4154732ae3f881b11e22879788c95f64";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();`
+        ]
     ],
     // 代码显示行号
     markdown: {
