@@ -7,6 +7,9 @@ github：[http://gitsifu.github.io](http://gitsifu.github.io)
 
 国内镜像gitee：[https://sifu.gitee.io/blog/](https://sifu.gitee.io/blog/)
 
+## 环境
+node 12.x
+
 ## 下载依赖
 
 ```
