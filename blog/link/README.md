@@ -141,6 +141,6 @@ location: 南昌
 
 [kaggle](https://www.kaggle.com/): 一个数据科学和机器学习竞赛平台，提供了许多公共数据集、notebook 和比赛项目。Kaggle上的竞赛项目可以让数据科学家和机器学习工程师们共同解决各种问题，并且可以通过竞赛获得奖金和声誉。此外，Kaggle还提供了许多数据科学和机器学习相关的课程和资源，可以帮助初学者学习和提高数据科学和机器学习技能。
 
-[TencentARC/GFPGAN](https://github.com/TencentARC/GFPGAN): GFPGAN 旨在开发用于现实世界人脸恢复的实用算法。
+[TencentARC/GFPGAN](https://github.com/TencentARC/GFPGAN): GFPGAN 旨在开发用于现实世界人脸恢复的实用算法。[demo](https://arc.tencent.com/zh/ai-demos/faceRestoration)
 
 <Vssue :title="$title" />
