@@ -58,7 +58,7 @@
                         name="maxWidthInput"
                         type="number"
                         id="maxWidthInput"
-                        v-model="maxWidth"
+                        v-model.number="maxWidth"
                         class="form-control"
                     />
                 </div>
@@ -68,7 +68,7 @@
                         name="maxHeightInput"
                         type="number"
                         id="maxHeightInput"
-                        v-model="maxHeight"
+                        v-model.number="maxHeight"
                         class="form-control"
                     />
                 </div>
@@ -80,7 +80,7 @@
                         min="0"
                         max="100"
                         id="closeHeightPercentInput"
-                        v-model="closeHeightPercent"
+                        v-model.number="closeHeightPercent"
                         class="form-control"
                     />
                 </div>
