@@ -87,7 +87,9 @@
             </div>
         </div>
         <button class="btn btn-primary" type="button" @click="open">Open bottom sheet</button>
-        <vue-bottom-sheet-vue2
+        <component
+            v-if="vueBottomSheetVue2"
+            :is="vueBottomSheetVue2"
             :overlay-click-close="clickToClose"
             :transition-duration="0.5"
             :max-width="maxWidth"
@@ -151,12 +153,11 @@
                 </p>
                 <button type="button" class="btn btn-danger" @click="close">Close</button>
             </div>
-        </vue-bottom-sheet-vue2>
+        </component>
     </div>
 </template>
 
 <script>
-import VueBottomSheetVue2 from '@nclsm/vue-bottom-sheet-vue2';
 import sketch from 'vue-color/src/components/Chrome'
 
 export default {
@@ -172,12 +173,18 @@ export default {
             backgroundScrollable: false,
             backgroundClickable: false,
             clickToClose: true,
-            canSwipe: true
+            canSwipe: true,
+            vueBottomSheetVue2: null,
         };
     },
     components: {
-        VueBottomSheetVue2,
         'sketch-picker': sketch,
+    },
+    mounted() {
+        import('@nclsm/vue-bottom-sheet-vue2').then(module => {
+            // use code
+            this.vueBottomSheetVue2 = module.default
+        })
     },
     methods: {
         open() {
