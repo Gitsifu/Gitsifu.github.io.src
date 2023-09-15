@@ -113,6 +113,8 @@ location: 南昌
 
 [1Panel](https://1panel.cn/): 1Panel 是新一代的 Linux 服务器运维管理面板。
 
+[qrcode](https://qrcode.antfu.me/#generator): 二维码生成工具
+
 ## 其他
 
 [cool-admin-midway](https://github.com/cool-team-official/cool-admin-midway): cool-admin(midway版)一个很酷的后台权限管理框架，模块化、插件化、CRUD极速开发，永久开源免费，基于midway.js 2.0、typeorm、mysql、jwt、element-ui等构建
