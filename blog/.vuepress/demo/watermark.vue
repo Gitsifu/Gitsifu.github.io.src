@@ -15,7 +15,7 @@
         水印文案：<input v-model="options.watermarkText"/>
       </label>
       <label>
-        水印旋转角度：<input v-model="options.angle"/>
+        水印旋转角度：<input v-model="options.angle" type="number"/>
       </label>
       <label>
         文字大小：<input v-model="options.fontSize" type="number"/>
