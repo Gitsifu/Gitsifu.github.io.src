@@ -1,34 +1,5 @@
 <template>
   <div>
-    <form>
-      <label>
-        水印文案：<input v-model="options.watermarkText"/>
-      </label>
-      <label>
-        水印旋转角度：<input v-model="options.angle"/>
-      </label>
-      <label>
-        文字大小：<input v-model="options.fontSize"/>
-      </label>
-      <label>
-        文字颜色：<input v-model="options.textColor"/>
-      </label>
-      <label>
-        水印模式：<input v-model="options.mode"/>
-      </label>
-      <label>
-        平铺块的大小：<input v-model="options.tileSize"/>
-      </label>
-      <label>
-        水印之间的间距：<input v-model="options.padding"/>
-      </label>
-      <label>
-        图片旋转角度：<input v-model="options.rotateAngle"/>
-      </label>
-      <label>
-        图片品质，取值0-1：<input v-model="options.quality"/>
-      </label>
-    </form>
     <div class="flex">
       <div class="item">
         <img :src="imgUrl"/>
@@ -39,13 +10,60 @@
         <div style="text-align: center;">加水印后</div>
       </div>
     </div>
+    <form>
+      <label>
+        水印文案：<input v-model="options.watermarkText"/>
+      </label>
+      <label>
+        水印旋转角度：<input v-model="options.angle"/>
+      </label>
+      <label>
+        文字大小：<input v-model="options.fontSize" type="number"/>
+      </label>
+      <label>
+        水印模式：
+        <select v-model="options.mode">
+          <option value="interval">interval</option>
+          <option value="repeat">repeat</option>
+        </select>
+      </label>
+      <label>
+        平铺块的大小：<input v-model="options.tileSize" type="number"/>
+      </label>
+      <label>
+        水印之间的间距：<input v-model="options.padding" type="number"/>
+      </label>
+      <label>
+        图片旋转角度：<input v-model="options.rotateAngle" type="number"/>
+      </label>
+      <label>
+        图片品质，取值0-1：<input v-model="options.quality" min="0" max="1" step="0.1" type="number"/>
+      </label>
+      <label>
+        生成的图片类型：
+        <select v-model="options.type">
+          <option value="image/png">image/png</option>
+          <option value="image/jpeg">image/jpeg</option>
+        </select>
+        <span>注意图片旋转后，jpeg格式不支持背景透明</span>
+      </label>
+      <label>
+        水印颜色：<input v-model="options.textColor" />
+        <sketch-picker v-model="color"/>
+      </label>
+    </form>
   </div>
 </template>
 
 <script>
 
+import sketch from 'vue-color/src/components/Chrome'
+
 export default {
   name: "watermark",
+  components: {
+    'sketch-picker': sketch,
+  },
   data() {
     return {
       imgUrl: '/images/watermark.jpg',
@@ -54,13 +72,15 @@ export default {
         watermarkText: '测试水印',
         angle: -30, // 水印旋转角度，负数表示逆时针旋转
         fontSize: 14, //水印文字的大小（以像素为单位）
-        textColor: "rgba(0, 0, 0, 0.4)",
+        textColor: "#00000040", // 水印颜色
         mode: 'interval', // 可选值 'repeat' 重复展示
         tileSize: 200,  // 平铺块的大小
         padding: 10,   // 水印之间的间距
         rotateAngle: 0, // 图片旋转角度，默认为0度，负数为逆时针旋转
         quality: 1, // 图片品质，取值0-1，值越大，生成的图片越大
-      }
+        type: 'image/png', // 生成的图片类型
+      },
+      color: ""
     }
   },
   mounted() {
@@ -72,9 +92,16 @@ export default {
         this.renderImg()
       },
       deep: true
+    },
+    color: {
+      handler(newVal,oldVal){
+        this.options.textColor = newVal.hex8
+      },
+      deep: true
     }
   },
   methods: {
+    // 渲染水印图片
     renderImg() {
       this.getWatermarkImg({
         url: this.imgUrl,
@@ -96,6 +123,7 @@ export default {
      * @param padding 水印之间的间距
      * @param rotateAngle 图片旋转角度 负数为逆时针旋转
      * @param quality 图片品质，取值0-1，值越大，生成的图片越大
+     * @param type 生成的图片类型，默认: 'image/png'
      * @returns {Promise<unknown>}
      */
     getWatermarkImg(
@@ -110,6 +138,7 @@ export default {
           padding = 10,   // 水印之间的间距
           rotateAngle = 0, // 图片旋转角度，默认为0度，负数为逆时针旋转
           quality = 0.5, // 图片品质，取值0-1，值越大，生成的图片越大
+          type = 'image/png', // 生成的图片类型，默认: 'image/png'
         }
     ) {
       return new Promise(async (resolve, reject) => {
@@ -183,7 +212,7 @@ export default {
 
           try {
             // 将带有水印的图片转换为 Base64 格式
-            const watermarkedImageSrc = canvas.toDataURL('image/jpeg', quality);
+            const watermarkedImageSrc = canvas.toDataURL(type, quality);
             resolve({
               base64: watermarkedImageSrc
             })
@@ -199,12 +228,14 @@ export default {
      * 旋转图片
      * @param url 图片url
      * @param angle 图片旋转的角度，负数为逆时针旋转
+     * @param type 生成的图片类型，默认: 'image/png'
      * @returns {Promise<unknown>}
      */
     rotateImage(
         {
           url,
-          angle = 0
+          angle = 0,
+          type = 'image/png'
         }
     ) {
       return new Promise((resolve, reject) => {
@@ -237,7 +268,7 @@ export default {
           context.drawImage(image, -width / 2, -height / 2, width, height);
 
           // 将旋转后的图像转换为base64
-          const rotatedImageSrc = canvas.toDataURL();
+          const rotatedImageSrc = canvas.toDataURL(type);
 
           resolve({
             base64: rotatedImageSrc
@@ -255,6 +286,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+form label{
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
 .flex {
   display: flex;
 

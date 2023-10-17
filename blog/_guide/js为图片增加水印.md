@@ -39,9 +39,10 @@ location: 南昌
  * @param tileSize 平铺块的大小
  * @param padding 水印之间的间距
  * @param rotateAngle 图片旋转角度 负数为逆时针旋转
+ * @param type 生成的图片类型，默认: 'image/png'
  * @returns {Promise<unknown>}
  */
-export function getWatermarkImg(
+export function     getWatermarkImg(
   {
     url,
     watermarkText = '测试水印',
@@ -52,16 +53,18 @@ export function getWatermarkImg(
     tileSize = 200,  // 平铺块的大小
     padding = 10,   // 水印之间的间距
     rotateAngle = 0, // 图片旋转角度，默认为0度，负数为逆时针旋转
+    quality = 0.5, // 图片品质，取值0-1，值越大，生成的图片越大
+    type = 'image/png', // 生成的图片类型，默认: 'image/png'
   }
 ) {
   return new Promise(async (resolve, reject) => {
     // 如果图片需要旋转
-    if(rotateAngle !== 0){
+    if (rotateAngle !== 0) {
       // 将图片旋转指定角度
-      try{
-        const value = await rotateImage({url, angle: rotateAngle})
-        url = value.url
-      }catch (e){
+      try {
+        const value = await this.rotateImage({url, angle: rotateAngle})
+        url = value.base64
+      } catch (e) {
         reject(e)
       }
     }
@@ -96,7 +99,7 @@ export function getWatermarkImg(
       context.font = fontSize + 'px Arial';  // 字体样式和大小
 
       // 绘制重复水印
-      if(mode === 'repeat'){
+      if (mode === 'repeat') {
         // 循环绘制水印
         for (let x = 0; x < canvas.width; x += tileSize + padding) {
           for (let y = 0; y < canvas.height; y += tileSize + padding) {
@@ -104,7 +107,7 @@ export function getWatermarkImg(
             context.fillText(watermarkText, x, y);  // 绘制水印文本
           }
         }
-      }else {
+      } else {
         // 循环绘制错行水印
         for (let x = 0; x < canvas.width; x += tileSize + padding) {
           for (let y = 0; y < canvas.height; y += tileSize + padding) {
@@ -125,7 +128,7 @@ export function getWatermarkImg(
 
       try {
         // 将带有水印的图片转换为 Base64 格式
-        const watermarkedImageSrc = canvas.toDataURL('image/jpeg', 0.5) ;
+        const watermarkedImageSrc = canvas.toDataURL(type, quality);
         resolve({
           base64: watermarkedImageSrc
         })
@@ -134,19 +137,21 @@ export function getWatermarkImg(
       }
     };
   })
-}
+},
 
 
 /**
  * 旋转图片
  * @param url 图片url
  * @param angle 图片旋转的角度，负数为逆时针旋转
+ * @param type 生成的图片类型，默认: 'image/png'
  * @returns {Promise<unknown>}
  */
-export function rotateImage(
+export function     rotateImage(
   {
     url,
-    angle = 0
+    angle = 0,
+    type = 'image/png'
   }
 ) {
   return new Promise((resolve, reject) => {
@@ -155,7 +160,7 @@ export function rotateImage(
     image.src = url
 
     // 设置当图片加载完成后的回调函数
-    image.onload = function() {
+    image.onload = function () {
       // 创建一个 Canvas 元素
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
@@ -179,7 +184,7 @@ export function rotateImage(
       context.drawImage(image, -width / 2, -height / 2, width, height);
 
       // 将旋转后的图像转换为base64
-      const rotatedImageSrc = canvas.toDataURL();
+      const rotatedImageSrc = canvas.toDataURL(type);
 
       resolve({
         base64: rotatedImageSrc
@@ -187,7 +192,7 @@ export function rotateImage(
     };
 
     // 设置当图片加载失败后的回调函数
-    image.onerror = function() {
+    image.onerror = function () {
       reject('无法加载图片');
     };
   });
