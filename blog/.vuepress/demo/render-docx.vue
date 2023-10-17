@@ -1,7 +1,7 @@
 <template>
   <div>
     <a target="_blank" href="/docx/tag-example.docx">下载模板文件tag-example.docx</a>
-    <button @click="downloadDoc">下载生成之后的文件tag-example.docx</button>
+    <button @click="downloadDoc">下载生成之后的文件</button>
   </div>
 </template>
 
@@ -64,7 +64,6 @@ export default {
     }
   },
   mounted() {
-    console.log('-----')
 
   },
   methods: {
