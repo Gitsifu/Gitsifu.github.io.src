@@ -7,6 +7,7 @@ import DemoChild from './demo/on-emit/demo-child'
 import DemoFather from './demo/on-emit/demo-father'
 import VueBottomSheetVue2Demo from "./demo/vue-bottom-sheet-vue2/vue-bottom-sheet-vue2-demo";
 import Watermark from './demo/watermark'
+import RenderDocx from './demo/render-docx'
 export default ({
                     Vue, // VuePress 正在使用的 Vue 构造函数
                     options, // 附加到根实例的一些选项
@@ -23,6 +24,7 @@ export default ({
     Vue.component(DemoFather.name, DemoFather)
     Vue.component(VueBottomSheetVue2Demo.name, VueBottomSheetVue2Demo)
     Vue.component(Watermark.name, Watermark)
+    Vue.component(RenderDocx.name, RenderDocx)
 
     // 路由切换事件处理
     router.beforeEach((to, from, next) => {

@@ -53,7 +53,11 @@ module.exports = {
             alias: {
                 '@assets': '../assets'
             }
-        }
+        },
+        node: {
+            global: true,
+            process: true
+        },
     },
     // 设置别名，两种方式都可以
     // alias: {
