@@ -69,7 +69,8 @@ export default {
                         message: "复制成功",
                         type: "success",
                         center: true,
-                        customClass: "copy-message"
+                        customClass: "copy-message",
+                        offset: 100,
                     });
                 });
 
@@ -78,7 +79,8 @@ export default {
                         message: "复制失败，请手动复制",
                         type: "error",
                         center: true,
-                        customClass: "copy-message"
+                        customClass: "copy-message",
+                        offset: 100,
                     });
                 });
             }, 500);

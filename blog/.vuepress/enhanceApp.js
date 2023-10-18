@@ -9,24 +9,27 @@ import VueBottomSheetVue2Demo from "./demo/vue-bottom-sheet-vue2/vue-bottom-shee
 import Watermark from './demo/watermark'
 import RenderDocx from './demo/render-docx'
 import tongji from "./utils/tongji";
+import ElementUI from "element-ui";
+import "./public/styles/element-variables.scss";
 
 export default ({
-                  Vue, // VuePress 正在使用的 Vue 构造函数
-                  options, // 附加到根实例的一些选项
-                  router, // 当前应用的路由实例
-                  siteData, // 站点元数据
-                  isServer // 当前应用配置是处于 服务端渲染 或 客户端
+                    Vue, // VuePress 正在使用的 Vue 构造函数
+                    options, // 附加到根实例的一些选项
+                    router, // 当前应用的路由实例
+                    siteData, // 站点元数据
+                    isServer // 当前应用配置是处于 服务端渲染 或 客户端
                 }) => {
-  Vue.component(SomeDemo.name, SomeDemo)
-  Vue.component(FontZpix.name, FontZpix)
-  Vue.component(RichText.name, RichText)
-  Vue.component(VAnimated.name, VAnimated)
-  Vue.component(OnEmit.name, OnEmit)
-  Vue.component(DemoChild.name, DemoChild)
-  Vue.component(DemoFather.name, DemoFather)
-  Vue.component(VueBottomSheetVue2Demo.name, VueBottomSheetVue2Demo)
-  Vue.component(Watermark.name, Watermark)
-  Vue.component(RenderDocx.name, RenderDocx)
+    Vue.component(SomeDemo.name, SomeDemo)
+    Vue.component(FontZpix.name, FontZpix)
+    Vue.component(RichText.name, RichText)
+    Vue.component(VAnimated.name, VAnimated)
+    Vue.component(OnEmit.name, OnEmit)
+    Vue.component(DemoChild.name, DemoChild)
+    Vue.component(DemoFather.name, DemoFather)
+    Vue.component(VueBottomSheetVue2Demo.name, VueBottomSheetVue2Demo)
+    Vue.component(Watermark.name, Watermark)
+    Vue.component(RenderDocx.name, RenderDocx)
 
-  tongji(router)
+    tongji(router)
+    Vue.use(ElementUI);
 }
