@@ -93,7 +93,8 @@ module.exports = {
 
         // 图片点击放大
         ['@vuepress/medium-zoom', {
-            selector: '.content__default p img',
+            // selector: '.content__default p img',
+            selector: 'img',
             // medium-zoom options here
             // See: https://github.com/francoischalifour/medium-zoom#options
             // options: {
@@ -207,6 +208,7 @@ module.exports = {
     ],
     theme: '@vuepress/blog',
     themeConfig: {
+        plugins: ['vuepress-plugin-code-copy'],
         // 全局分页配置
         globalPagination: {
             prevText: '上一页', // Text for previous links.
