@@ -176,3 +176,5 @@ renderDoc({
   fileName: 'output'
 })
 ```
+
+<Vssue :title="$title" />
