@@ -21,25 +21,25 @@ const platformConfig = {
     }
 }
 
-const {base,platform,owner,repo,clientId,clientSecret} = platformConfig[PLATFORM]
+const {base, platform, owner, repo, clientId, clientSecret} = platformConfig[PLATFORM]
 
 module.exports = {
     base,
     title: 'sifu',
     description: 'sifu的个人博客',
-    head:[
-        ['link',{rel:'icon',href:'/favicon.ico'}],
+    head: [
+        ['link', {rel: 'icon', href: '/favicon.ico'}],
         // 防图片盗链解决方案 https://github.com/biaochenxuying/blog/issues/31
-        ['meta',{name: 'referrer', content: 'never'}],
+        ['meta', {name: 'referrer', content: 'never'}],
         // 百度统计
         [
-          'script',
-          {},
-          `var _hmt = _hmt || [];
+            'script',
+            {},
+            `var _hmt = _hmt || [];
           (function() {
             var hm = document.createElement("script");
             hm.src = "https://hm.baidu.com/hm.js?4154732ae3f881b11e22879788c95f64";
-            var s = document.getElementsByTagName("script")[0]; 
+            var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
           })();`
         ]
@@ -75,6 +75,21 @@ module.exports = {
             issueContent: ({url}) =>
                 `这个 Issue 由 Vssue 自动创建，用来存储该页面的评论：${url}`
         }],
+
+        // 代码复制
+        ["vuepress-plugin-code-copy",
+            // true
+            // 或者
+            {
+                selector: 'div[class*="language-"] pre', // This is the CSS selector to which the copy button component will be attached.
+                align: 'bottom', // Supported options: top and bottom
+                color: '#27b1ff', // This sets the color of the copy button and can take any hex code.
+                backgroundTransition: true, // 背景转换 当用户按下复制按钮时，启用附加代码块的背景过渡动画
+                backgroundColor: '#0075b8', // This sets the color of the background transition animation and can take any hex code.
+                successText: '已复制到剪切板！', //复制成功时 提示信息
+                staticIcon: true //默认false, false时 “复制图标” 鼠标悬停可见，true时始终可见
+            }
+        ],
 
         // 图片点击放大
         ['@vuepress/medium-zoom', {

@@ -40,6 +40,7 @@
     "vue-color": "^2.8.1",
     "vue-esign": "^1.1.4",
     "vuepress": "^1.7.1",
+    "vuepress-plugin-code-copy": "^1.0.6",
     "vuepress-plugin-cursor-effects": "^1.0.0",
     "vuepress-plugin-dynamic-title": "^1.0.0",
     "wangeditor": "^4.5.2",
