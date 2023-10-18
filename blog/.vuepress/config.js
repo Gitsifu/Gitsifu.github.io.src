@@ -97,15 +97,15 @@ module.exports = {
         // [require('./plugins/plugin-back-to-top'), {}]
 
         // 鼠标动效
-        [
-            //鼠标点击特效 先安装在配置， npm install vuepress-plugin-cursor-effects --save
-            "cursor-effects",
-            {
-                size: 3,                    // size of the particle, default: 2
-                shape: ['star'],  // shape of the particle,['star'| 'circle'] default: 'star'
-                zIndex: 999999999           // z-index property of the canvas, default: 999999999
-            }
-        ],
+        // [
+        //     //鼠标点击特效 先安装在配置， npm install vuepress-plugin-cursor-effects --save
+        //     "cursor-effects",
+        //     {
+        //         size: 3,                    // size of the particle, default: 2
+        //         shape: ['star'],  // shape of the particle,['star'| 'circle'] default: 'star'
+        //         zIndex: 999999999           // z-index property of the canvas, default: 999999999
+        //     }
+        // ],
 
         // 动态标题
         // [

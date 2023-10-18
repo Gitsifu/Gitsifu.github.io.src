@@ -15,10 +15,10 @@
         水印文案：<input v-model="options.watermarkText"/>
       </label>
       <label>
-        水印旋转角度：<input v-model="options.angle" type="number"/>
+        水印旋转角度：<input v-model.number="options.angle" type="number"/>
       </label>
       <label>
-        文字大小：<input v-model="options.fontSize" type="number"/>
+        文字大小：<input v-model.number="options.fontSize" type="number"/>
       </label>
       <label>
         水印模式：
@@ -28,16 +28,16 @@
         </select>
       </label>
       <label>
-        平铺块的大小：<input v-model="options.tileSize" type="number"/>
+        平铺块的大小：<input v-model.number="options.tileSize" type="number"/>
       </label>
       <label>
-        水印之间的间距：<input v-model="options.padding" type="number"/>
+        水印之间的间距：<input v-model.number="options.padding" type="number"/>
       </label>
       <label>
-        图片旋转角度：<input v-model="options.rotateAngle" type="number"/>
+        图片旋转角度：<input v-model.number="options.rotateAngle" type="number"/>
       </label>
       <label>
-        图片品质，取值0-1：<input v-model="options.quality" min="0" max="1" step="0.1" type="number"/>
+        图片品质，取值0-1：<input v-model.number="options.quality" min="0" max="1" step="0.1" type="number"/>
       </label>
       <label>
         生成的图片类型：
