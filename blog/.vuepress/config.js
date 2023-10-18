@@ -82,19 +82,7 @@ module.exports = {
         }],
 
         // 代码复制
-        ["vuepress-plugin-code-copy",
-            // true
-            // 或者
-            {
-                selector: 'div[class*="language-"] pre', // This is the CSS selector to which the copy button component will be attached.
-                align: 'bottom', // Supported options: top and bottom
-                color: '#27b1ff', // This sets the color of the copy button and can take any hex code.
-                backgroundTransition: true, // 背景转换 当用户按下复制按钮时，启用附加代码块的背景过渡动画
-                backgroundColor: '#0075b8', // This sets the color of the background transition animation and can take any hex code.
-                successText: '已复制到剪切板！', //复制成功时 提示信息
-                staticIcon: true //默认false, false时 “复制图标” 鼠标悬停可见，true时始终可见
-            }
-        ],
+        [require("./plugins/copy/index")],
 
         // 图片点击放大
         ['@vuepress/medium-zoom', {
