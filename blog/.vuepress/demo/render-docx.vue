@@ -8,69 +8,73 @@
 <script>
 import Docxtemplater from "docxtemplater";
 import PizZip from "pizzip";
-import PizZipUtils from "pizzip/utils/index.js";
+// import PizZipUtils from "pizzip/utils/index.js";
 import {saveAs} from "file-saver";
 import ImageModule from 'docxtemplater-image-module-free'
 
-const imageOptions = {
-  centered: false,
-  getImage(url) {
-    return new Promise(function (resolve, reject) {
-      PizZipUtils.getBinaryContent(
-          url,
-          function (error, content) {
-            if (error) {
-              return reject(error);
-            }
-            return resolve(content);
-          }
-      );
-    });
-  },
-  getSize(img, url, tagName) {
-    return new Promise(function (resolve, reject) {
-      const image = new Image();
-      image.src = url;
-      image.onload = function () {
-        switch (tagName) {
-            // img
-          case 'img':
-            resolve([100, 100 * image.height / image.width]);
-            break;
-          default:
-            resolve([image.width, image.height]);
-        }
-      };
-      image.onerror = function (e) {
-        console.log(
-            "img, url, tagName : ",
-            img,
-            url,
-            tagName
-        );
-        alert(
-            "An error occured while loading " +
-            url
-        );
-        reject(e);
-      };
-    });
-  },
-}
 export default {
   name: "render-docx",
   data(){
     return {
+      PizZipUtils: null,
+      imageOptions: {}
     }
   },
   mounted() {
-
+    import('pizzip/utils/index.js').then(module=>{
+      this.PizZipUtils = module.default
+      this.imageOptions = {
+        centered: false,
+        getImage(url) {
+          return new Promise(function (resolve, reject) {
+            this.PizZipUtils.getBinaryContent(
+                url,
+                function (error, content) {
+                  if (error) {
+                    return reject(error);
+                  }
+                  return resolve(content);
+                }
+            );
+          });
+        },
+        getSize(img, url, tagName) {
+          return new Promise(function (resolve, reject) {
+            const image = new Image();
+            image.src = url;
+            image.onload = function () {
+              switch (tagName) {
+                  // img
+                case 'img':
+                  resolve([100, 100 * image.height / image.width]);
+                  break;
+                default:
+                  resolve([image.width, image.height]);
+              }
+            };
+            image.onerror = function (e) {
+              console.log(
+                  "img, url, tagName : ",
+                  img,
+                  url,
+                  tagName
+              );
+              alert(
+                  "An error occured while loading " +
+                  url
+              );
+              reject(e);
+            };
+          });
+        },
+      }
+    })
   },
   methods: {
     downloadDoc() {
       const data = {
-        first_name: '明',
         last_name: '小',
+        first_name: '明',
         img: '/sponsor-qrcode/qrcode-alipay.png'
       }
       this.renderDoc({
@@ -78,7 +82,7 @@ export default {
       })
     },
     loadFile(url, callback) {
-      PizZipUtils.getBinaryContent(url, callback);
+      this.PizZipUtils.getBinaryContent(url, callback);
     },
 
 

@@ -42,7 +42,7 @@ location: 南昌
  * @param type 生成的图片类型，默认: 'image/png'
  * @returns {Promise<unknown>}
  */
-export function     getWatermarkImg(
+export function getWatermarkImg(
   {
     url,
     watermarkText = '测试水印',
@@ -147,7 +147,7 @@ export function     getWatermarkImg(
  * @param type 生成的图片类型，默认: 'image/png'
  * @returns {Promise<unknown>}
  */
-export function     rotateImage(
+export function rotateImage(
   {
     url,
     angle = 0,

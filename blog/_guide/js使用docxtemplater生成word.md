@@ -166,7 +166,9 @@ export function renderDoc({templateUrl = '/docx/tag-example.docx', data, fileNam
 ```javascript
 import {renderDoc} from 'renderDoc.js'
 const data = {
-  
+  last_name: '小',
+  first_name: '明',
+  img: '/sponsor-qrcode/qrcode-alipay.png'
 }
 renderDoc({
   templateUrl: '',
