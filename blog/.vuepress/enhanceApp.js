@@ -8,7 +8,6 @@ import DemoFather from './demo/on-emit/demo-father'
 import VueBottomSheetVue2Demo from "./demo/vue-bottom-sheet-vue2/vue-bottom-sheet-vue2-demo";
 import Watermark from './demo/watermark'
 import RenderDocx from './demo/render-docx'
-import copy from "./utils/copy";
 import tongji from "./utils/tongji";
 
 export default ({
@@ -29,6 +28,5 @@ export default ({
   Vue.component(Watermark.name, Watermark)
   Vue.component(RenderDocx.name, RenderDocx)
 
-  copy()
   tongji(router)
 }

@@ -31,6 +31,11 @@ module.exports = {
         ['link', {rel: 'icon', href: '/favicon.ico'}],
         // 防图片盗链解决方案 https://github.com/biaochenxuying/blog/issues/31
         ['meta', {name: 'referrer', content: 'never'}],
+        // 复制添加版权说明
+        [
+            'script',
+            {src: '/js/copy.js'}
+        ],
         // 百度统计
         [
             'script',
