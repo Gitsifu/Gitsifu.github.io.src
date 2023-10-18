@@ -29,6 +29,6 @@ export default ({
   Vue.component(Watermark.name, Watermark)
   Vue.component(RenderDocx.name, RenderDocx)
 
-  Vue.use(copy)
+  copy()
   tongji(router)
 }

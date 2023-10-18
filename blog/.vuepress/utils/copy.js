@@ -1,6 +1,5 @@
 // 复制添加版权说明
-export default  {
-  install: function (Vue, options){
+export default ()=>  {
     function addCopy(e) {
       let copyTxt = ""
       e.preventDefault(); // 取消默认的复制事件
@@ -15,5 +14,4 @@ export default  {
     document.addEventListener("copy", e => {
       addCopy(e)
     });
-  }
 }
