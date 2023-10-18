@@ -2,7 +2,7 @@
   <div>
     <div class="flex">
       <div class="item">
-        <img :src="imgUrl"/>
+        <img :src="options.url"/>
         <div style="text-align: center;">加水印前</div>
       </div>
       <div class="item">
@@ -66,13 +66,13 @@ export default {
   },
   data() {
     return {
-      imgUrl: '/images/watermark.jpg',
       watermarkImg: '',
       options: {
-        watermarkText: '测试水印',
+        url: '/images/watermark.jpg',
+        watermarkText: 'SIFU',
         angle: -30, // 水印旋转角度，负数表示逆时针旋转
-        fontSize: 14, //水印文字的大小（以像素为单位）
-        textColor: "#00000040", // 水印颜色
+        fontSize: 30, //水印文字的大小（以像素为单位）
+        textColor: "#503CE2A8", // 水印颜色
         mode: 'interval', // 可选值 'repeat' 重复展示
         tileSize: 200,  // 平铺块的大小
         padding: 10,   // 水印之间的间距
@@ -80,7 +80,7 @@ export default {
         quality: 1, // 图片品质，取值0-1，值越大，生成的图片越大
         type: 'image/png', // 生成的图片类型
       },
-      color: ""
+      color: "#503CE2A8"
     }
   },
   mounted() {
@@ -104,8 +104,7 @@ export default {
     // 渲染水印图片
     renderImg() {
       this.getWatermarkImg({
-        url: this.imgUrl,
-        ...this.options,
+        ...this.options
       }).then(res => {
         const {base64} = res
         this.watermarkImg = base64

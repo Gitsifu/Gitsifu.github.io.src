@@ -4,6 +4,7 @@ date: 2023-10-17
 tags: 
   - javascript
   - 水印
+  - watermark
 author: sifu
 location: 南昌
 ---
