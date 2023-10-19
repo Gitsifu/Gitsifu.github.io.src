@@ -52,7 +52,7 @@ export default {
                     const btnID = `${id}-btn`;
                     const btn = document.createElement("div");
 
-                    container.setAttribute("id", id);
+                    pre.setAttribute("id", id);
 
                     btn.classList.add("copy-btn");
                     btn.setAttribute("id", btnID);
