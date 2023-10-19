@@ -72,7 +72,7 @@ export default {
             watermarkImg: '',
             options: {
                 url: '/images/watermark.jpg',
-                watermarkText: 'SIFU',
+                watermarkText: 'LOVE',
                 angle: -30, // 水印旋转角度，负数表示逆时针旋转
                 fontSize: 30, //水印文字的大小（以像素为单位）
                 textColor: "#503CE2A8", // 水印颜色
