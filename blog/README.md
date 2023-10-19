@@ -7,9 +7,17 @@ author: sifu
 location: 南昌  
 showSponsor: true
 ---
-# sifu
+
+# SIFU
 
 这个博主有点懒，首页暂时没有什么可看的~
+
+如果网站内容对您有一定帮助，就请作者喝杯咖啡吧~
+
+<div style="display: flex;">
+    <img style="width: 30%;" src="/images/qrcode-wechat.png" alt="微信赞赏码">
+    <img style="width: 30%;" src="/images/qrcode-alipay.png" alt="微信赞赏码">
+</div>
 
 <RecoDemo>
   <template slot="code-template">
