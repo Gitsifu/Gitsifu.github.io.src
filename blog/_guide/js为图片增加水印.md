@@ -54,7 +54,7 @@ export function getWatermarkImg(
     tileSize = 200,  // 平铺块的大小
     padding = 10,   // 水印之间的间距
     rotateAngle = 0, // 图片旋转角度，默认为0度，负数为逆时针旋转
-    quality = 0.5, // 图片品质，取值0-1，值越大，生成的图片越大
+    quality = 1, // 图片品质，取值0-1，值越大，生成的图片越大
     type = 'image/png', // 生成的图片类型，默认: 'image/png'
   }
 ) {
