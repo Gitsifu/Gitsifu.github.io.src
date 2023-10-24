@@ -152,6 +152,8 @@ export default {
                         // errorMessages is a humanly readable message looking like this :
                         // 'The tag beginning with "foobar" is unopened'
                     }
+                    this.loading = false
+                    this.$message.error('网络错误，请重试');
                     throw error;
                 }
 
