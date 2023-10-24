@@ -10,63 +10,55 @@
                 <div style="text-align: center;">加水印后</div>
             </div>
         </div>
-        <form>
-            <label>
-                水印文案：<input v-model="options.watermarkText"/>
-            </label>
-            <label>
-                水印旋转角度：<input v-model.number="options.angle" type="number"/>
-            </label>
-            <label>
-                文字大小：<input v-model.number="options.fontSize" type="number"/>
-            </label>
-            <label>
-                水印模式：
-                <select v-model="options.mode">
-                    <option value="interval">interval</option>
-                    <option value="repeat">repeat</option>
-                </select>
-            </label>
-            <label>
-                平铺块的大小：<input v-model.number="options.tileSize" type="number"/>
-            </label>
-            <label>
-                水印之间的间距：<input v-model.number="options.padding" type="number"/>
-            </label>
-            <label>
-                图片旋转角度：<input v-model.number="options.rotateAngle" type="number"/>
-            </label>
-            <label>
-                图片品质，取值0-1：<input v-model.number="options.quality" min="0" max="1" step="0.1" type="number"/>
-                <span style="font-size: 12px;color: #bb2d3b;">对于 JPEG 和 WebP 格式的图像，该参数表示图像的质量级别，范围为 0 到 1。对于 PNG 格式的图像，该参数被忽略</span>
-            </label>
-            <label>
-                生成的图片类型：
-                <select v-model="options.type">
-                    <option value="image/png">image/png</option>
-                    <option value="image/jpeg">image/jpeg</option>
-                    <option value="image/webp">image/webp</option>
-                </select>
+        <el-form :inline="true">
+            <el-form-item label="水印文案">
+                <el-input v-model="options.watermarkText"/>
+            </el-form-item>
+            <el-form-item label="文字大小">
+                <el-input-number v-model.number="options.fontSize" type="number"/>
+            </el-form-item>
+            <el-form-item label="水印颜色">
+                <el-color-picker v-model="options.textColor" :show-alpha="true"></el-color-picker>
+            </el-form-item>
+            <el-form-item label="水印旋转角度">
+                <el-input-number v-model.number="options.angle" type="number"/>
+            </el-form-item>
+            <el-form-item label="水印模式">
+                <el-select v-model="options.mode">
+                    <el-option value="interval">interval</el-option>
+                    <el-option value="repeat">repeat</el-option>
+                </el-select>
+            </el-form-item>
+            <el-form-item label="平铺块的大小">
+                <el-input-number v-model.number="options.tileSize" type="number"/>
+            </el-form-item>
+            <el-form-item label="水印之间的间距">
+                <el-input-number v-model.number="options.padding" type="number"/>
+            </el-form-item>
+            <el-form-item label="图片旋转角度">
+                <el-input-number v-model.number="options.rotateAngle" type="number"/>
+            </el-form-item>
+            <el-form-item label="生成的图片类型">
+                <el-select v-model="options.type">
+                    <el-option value="image/png">image/png</el-option>
+                    <el-option value="image/jpeg">image/jpeg</el-option>
+                    <el-option value="image/webp">image/webp</el-option>
+                </el-select>
                 <span style="font-size: 12px;color: #bb2d3b;">注意图片旋转后，jpeg格式不支持背景透明</span>
-            </label>
-            <br/>
-            <label>
-                水印颜色：<input v-model="options.textColor"/>
-                <sketch-picker v-model="color"/>
-            </label>
-        </form>
+            </el-form-item>
+            <el-form-item label="图片品质，取值0-1">
+                <el-input-number v-model.number="options.quality" :min="0" :max="1" :step="0.1" type="number"/>
+                <span style="font-size: 12px;color: #bb2d3b;">对于 JPEG 和 WebP 格式的图像，该参数表示图像的质量级别，范围为 0 到 1。对于 PNG 格式的图像，该参数被忽略</span>
+            </el-form-item>
+        </el-form>
     </div>
 </template>
 
 <script>
 
-import sketch from 'vue-color/src/components/Chrome'
-
 export default {
     name: "watermark",
-    components: {
-        'sketch-picker': sketch,
-    },
+    components: {},
     data() {
         return {
             watermarkImg: '',
@@ -83,7 +75,6 @@ export default {
                 quality: 1, // 图片品质，取值0-1，值越大，生成的图片越大
                 type: 'image/png', // 生成的图片类型
             },
-            color: "#503CE2A8"
         }
     },
     mounted() {
@@ -96,12 +87,6 @@ export default {
             },
             deep: true
         },
-        color: {
-            handler(newVal, oldVal) {
-                this.options.textColor = newVal.hex8
-            },
-            deep: true
-        }
     },
     methods: {
         // 渲染水印图片
