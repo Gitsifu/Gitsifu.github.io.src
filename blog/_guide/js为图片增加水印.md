@@ -9,6 +9,8 @@ author: sifu
 location: 南昌
 ---
 
+> 无任何外部依赖，纯javaScript实现图片添加水印，同时提供图片旋转任意角度的代码实现
+
 ## 一、效果展示
 
 <RecoDemo>

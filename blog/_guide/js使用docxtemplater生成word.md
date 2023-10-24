@@ -10,6 +10,8 @@ author: sifu
 location: 南昌
 ---
 
+> 前端通过javaScript生成word文档，看这一篇文章就够了
+
 ## 一、成果展示
 <RecoDemo>
   <template slot="code-template">
