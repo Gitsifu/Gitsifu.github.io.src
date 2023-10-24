@@ -23,7 +23,6 @@ export default {
     mounted() {
         import('pizzip/utils/index.js').then(module => {
             this.PizZipUtils = module.default
-            console.log(this.PizZipUtils)
             this.imageOptions = {
                 centered: false,
                 getImage(url) {
