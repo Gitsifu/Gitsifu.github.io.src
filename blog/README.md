@@ -21,15 +21,15 @@ showSponsor: true
 
 <RecoDemo>
   <template slot="code-template">
-     <<< @/blog/.vuepress/demo/demo.vue?template
+     <<< @/blog/.vuepress/demo/vue-demo.vue?template
   </template>
   <template slot="code-script">
-    <<< @/blog/.vuepress/demo/demo.vue?script
+    <<< @/blog/.vuepress/demo/vue-demo.vue?script
   </template>
   <template slot="code-style">
-    <<< @/blog/.vuepress/demo/demo.vue?style
+    <<< @/blog/.vuepress/demo/vue-demo.vue?style
   </template>
-  <demo slot="demo"></demo>
+  <vue-demo slot="demo"></vue-demo>
 </RecoDemo>
 
 <!-- more -->

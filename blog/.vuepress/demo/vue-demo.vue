@@ -41,7 +41,7 @@
 // https://github.com/JaimeCheng/vue-esign   canvas手写签字 电子签名
 import VueEsign from 'vue-esign'
 export default {
-    name: "demo",
+    name: "vue-demo",
     components:{
         VueEsign
     },

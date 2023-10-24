@@ -1,4 +1,4 @@
-import SomeDemo from './demo/demo'
+import SomeDemo from './demo/vue-demo'
 import FontZpix from './demo/font-zpix'
 import RichText from './demo/rich-text'
 import VAnimated from './demo/v-animated'
