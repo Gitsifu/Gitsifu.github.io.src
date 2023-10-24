@@ -284,7 +284,13 @@ location ^~ /mobile {
 
 ## 五、示例项目GitHub地址
 
-github: [https://github.com/Gitsifu/vue-multiple-page](https://github.com/Gitsifu/vue-multiple-page)
+### 1、vue-cli + vue2示例代码
+
+[https://github.com/Gitsifu/vue-multiple-page](https://github.com/Gitsifu/vue-multiple-page)
+
+### 2、vite + vue3示例代码
+
+[https://github.com/Gitsifu/vite-multipage](https://github.com/Gitsifu/vite-multipage)
 
 <Vssue :title="$title" />
 
