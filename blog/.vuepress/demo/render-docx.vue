@@ -1,7 +1,7 @@
 <template>
     <div>
-        <a target="_blank" href="/docx/tag-example.docx">下载模板文件tag-example.docx</a>
-        <button @click="downloadDoc">下载生成之后的文件</button>
+        <a target="_blank" href="/docx/tag-example.docx" style="margin-right: 20px;">下载模板文件tag-example.docx</a>
+        <el-button @click="downloadDoc" type="primary" v-loading="loading">下载生成之后的文件</el-button>
     </div>
 </template>
 
@@ -16,6 +16,7 @@ export default {
     name: "render-docx",
     data() {
         return {
+            loading: false,
             PizZipUtils: null,
             imageOptions: {}
         }
@@ -72,6 +73,7 @@ export default {
     },
     methods: {
         downloadDoc() {
+            this.loading = true
             const data = {
                 last_name: '小',
                 first_name: '明',
@@ -120,6 +122,7 @@ export default {
                         });
                         // Output the document using Data-URI
                         saveAs(out, `${fileName}.docx`);
+                        this.loading = false
                     });
                 } catch (error) {
                     // The error thrown here contains additional information when logged with JSON.stringify (it contains a properties object containing all suberrors).
