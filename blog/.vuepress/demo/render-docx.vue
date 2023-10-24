@@ -75,7 +75,7 @@ export default {
       const data = {
         last_name: '小',
         first_name: '明',
-        img: '/sponsor-qrcode/qrcode-alipay.png'
+        img: '/images/qrcode-alipay.png'
       }
       this.renderDoc({
         data
