@@ -10,7 +10,7 @@ author: sifu
 location: 南昌
 ---
 
-## 一、成果
+## 一、成果展示
 <RecoDemo>
   <template slot="code-template">
      <<< @/blog/.vuepress/demo/render-docx.vue?template
@@ -161,7 +161,7 @@ export function renderDoc({templateUrl = '/docx/tag-example.docx', data, fileNam
 }
 ```
 
-## 四、使用
+## 四、如何使用
 
 ```javascript
 import {renderDoc} from 'renderDoc.js'
@@ -175,6 +175,180 @@ renderDoc({
   data,
   fileName: 'output'
 })
+```
+
+## 五、常用语法
+
+### 1、基础文本
+- docx
+```text
+Hello {name} !
+```
+
+- data
+```json
+{
+    name: "John";
+}
+```
+
+- 渲染结果
+```text
+Hello John !
+```
+
+### 2、图片渲染
+```text
+{%img}
+```
+
+- data
+```json
+{
+    "img": "/images/1.png"
+}
+```
+
+### 3、条件渲染
+- docx
+```text
+{#hasKitty}Cat’s name: {kitty}{/hasKitty}
+{#hasDog}Dog’s name: {dog}{/hasDog}
+```
+
+- data
+```json
+{
+    "hasKitty": true,
+    "kitty": "Minie"
+    "hasDog": false,
+    "dog": null
+}
+```
+- 渲染结果
+```text
+Cat’s name: Minie
+```
+
+>else条件渲染
+
+- docx
+```text
+{#repo}
+Repo name : {name}
+{/repo}
+{^repo}
+No repos :(
+{/repo}
+```
+
+- data
+```json
+{
+  "repo": []
+}
+```
+
+- 渲染结果
+```text
+No repos :(
+```
+
+### 4、循环渲染
+
+- docx
+```text
+{#products}
+{name}, {price} $
+{/products}
+```
+
+- data
+```json
+{
+    "products": [
+        { name: "Windows", price: 100 },
+        { name: "Mac OSX", price: 200 },
+        { name: "Ubuntu", price: 0 }
+    ]
+}
+```
+
+- 渲染结果
+```text
+Windows, 100 $
+Mac OSX, 200 $
+Ubuntu, 0 $
+```
+
+> 或者
+
+- docx
+```text
+{#products} {.} {/products}
+```
+
+- data
+```json
+{
+   "products": [
+       "Windows",
+       "Mac OSX",
+       "Ubuntu"
+   ]
+}
+```
+
+- 渲染结果
+```text
+Windows Mac OSX Ubuntu
+```
+
+### 5、多行表格循环渲染
+
+- docx
+
+| Name             | Age   | Phone Number   |
+|------------------|-------|----------------|
+| {#users}{name}   | {age} | {phone}{/}     |
+
+- data 
+```json
+{
+    users: [
+        { name: "John", age: 22, phone: "+33653454343" },
+        { name: "Mary", age: 25, phone: "+33666666666" },
+    ],
+}
+```
+
+- 渲染结果
+
+| Name     | Age    | Phone Number   |
+|----------|--------|----------------|
+| John     | 22     | +33653454343   |
+| Mary     | 25     | +33666666666   |
+
+
+> 更多模板语法请查阅官网文档：[https://docxtemplater.com/docs/tag-types/](https://docxtemplater.com/docs/tag-types/)
+
+
+## 六、注意事项
+
+> 如果代码、标签和数据都没有写错，但是就是渲染不出来，请将标签换行。
+
+有可能出现的问题：
+
+```text
+{#hasImg} {%img} {/hasImg}
+```
+
+如果以上模板图片无法渲染，请将标签换行再次尝试，如：
+
+```text
+{#hasImg} 
+    {%img}
+{/hasImg}
 ```
 
 <Vssue :title="$title" />
