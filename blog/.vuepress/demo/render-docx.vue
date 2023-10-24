@@ -106,7 +106,7 @@ export default {
         const doc = new Docxtemplater(zip, {
           paragraphLoop: true,
           linebreaks: true,
-          modules: [new ImageModule(imageOptions)]
+          modules: [new ImageModule(this.imageOptions)]
         });
 
         try {
