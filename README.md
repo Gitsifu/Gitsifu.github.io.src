@@ -13,7 +13,7 @@ node 12.x
 ## 下载依赖
 
 ```
-npm install 
+npm install --registry=https://registry.npmmirror.com
 // 或者
 yarn
 ```

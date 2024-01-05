@@ -1,5 +1,16 @@
 <template>
     <div>
+        <el-upload
+            drag
+            action="#"
+            :limit="1"
+            :auto-upload="false"
+            :on-change="onFileChange"
+            style="width: 100%;"
+        >
+            <i class="el-icon-upload"></i>
+            <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+        </el-upload>
         <div class="flex">
             <div class="item">
                 <img :src="options.url"/>
@@ -89,6 +100,34 @@ export default {
         },
     },
     methods: {
+        fileToBase64(file) {
+            return new Promise((resolve, reject) => {
+                // 创建一个新的 FileReader 对象
+                const reader = new FileReader();
+                // 读取 File 对象
+                reader.readAsDataURL(file);
+                // 加载完成后
+                reader.onload = function () {
+                    // 将读取的数据转换为 base64 编码的字符串
+                    const base64String = reader.result;
+                    // 解析为 Promise 对象，并返回 base64 编码的字符串
+                    resolve(base64String);
+                };
+
+                // 加载失败时
+                reader.onerror = function () {
+                    reject(new Error("Failed to load file"));
+                };
+            });
+        },
+        // 上传图片改变
+        onFileChange(file, fileList) {
+            console.log(file.raw, fileList)
+            this.fileToBase64(file.raw).then(res=>{
+                this.options.url = res
+                this.renderImg()
+            })
+        },
         // 渲染水印图片
         renderImg() {
             this.getWatermarkImg({
