@@ -140,6 +140,8 @@ location: 南昌
 [Blossom](https://github.com/blossom-editor/blossom): Blossom 是一个支持私有部署的云端双链笔记软件，你可以将你的笔记，图片，个人计划安排保存在自己的服务器中，并在任意设备之间实时同步。同时还是一个动态博客。
 
 [m3u8-downloader](https://github.com/Momo707577045/m3u8-downloader): m3u8 视频在线提取工具
+
+[earthworm](https://github.com/cuixueshe/earthworm): 这是一个开源的在线学习英语网站，支持自托管和本地运行。它采用连词成句、循序渐进的方法帮你学习英语。通过不断地重复形成肌肉记忆，并结合游戏奖励和积分排名的方式，让背单词变得有趣且高效。
 ## 机器学习 | 人工智能
 
 [《动手学深度学习》](https://zh.d2l.ai/): 面向中文读者的能运行、可讨论的深度学习教科书,含 PyTorch、NumPy/MXNet、TensorFlow 和 PaddlePaddle 实现 ,被全球 60 多个国家 400 多所大学用于教学
