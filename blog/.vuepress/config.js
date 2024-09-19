@@ -253,9 +253,9 @@ module.exports = {
                 {
                     text: 'MIT Licensed | Copyright © 2016-present sifu',
                 },
-                {
-                    text: 'ICP备案/许可证号：赣ICP备2022010853号-1'
-                }
+                // {
+                //     text: 'ICP备案/许可证号：赣ICP备2022010853号-1'
+                // }
             ],
         },
 
