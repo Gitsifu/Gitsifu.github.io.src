@@ -16,7 +16,7 @@ showSponsor: true
 
 <div style="display: flex;">
     <img style="width: 30%;" src="/images/qrcode-wechat.png" alt="微信赞赏码">
-    <img style="width: 30%;" src="/images/qrcode-alipay.png" alt="微信赞赏码">
+    <img style="width: 30%;" src="/images/qrcode-alipay.png" alt="支付宝赞赏码">
 </div>
 
 <RecoDemo>
