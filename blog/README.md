@@ -32,6 +32,8 @@ showSponsor: true
   <vue-demo slot="demo"></vue-demo>
 </RecoDemo>
 
+![:sifu](https://count.getloli.com/@sifu?name=sifu&theme=random&padding=7&offset=0&scale=1&pixelated=1&darkmode=auto)
+
 <!-- more -->
 
 <Vssue :title="$title" />
