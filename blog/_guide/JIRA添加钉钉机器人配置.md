@@ -23,3 +23,5 @@ location: 南昌
     }
 }
 ```
+
+> docker搭建jira：[Gitsifu/jira-docker](https://github.com/Gitsifu/jira-docker)
