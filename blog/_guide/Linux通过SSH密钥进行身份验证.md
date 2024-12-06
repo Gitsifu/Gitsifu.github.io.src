@@ -76,3 +76,24 @@ ssh root@myserver
 
 如果一切正常，您应该能够成功登录而无需输入密码。这意味着 A 服务器的 SSH 密钥已成功添加到 B 服务器的 ~/.ssh/authorized_keys 中。
 
+### 步骤 6: 远程执行脚本
+
+#### 方式一： 在 A 服务器上，使用以下命令执行 A 服务器中的脚本：
+```bash
+ssh root@myserver 'bash -s' < script.sh
+```
+
+这一步中，'bash -s' 是一个特殊参数，它将导致远程服务器执行一个 bash 命令，而不需要输入任何命令。然后，< script.sh> 是一个文件名，它指定了要执行的脚本。
+
+#### 方式二： 在 A 服务器上，使用以下命令执行 B 服务器中的脚本：
+
+```bash
+ssh root@myserver script.sh
+```
+
+> **注意：**
+> 
+> 第一种方式（`ssh root@myserver 'bash -s' < script.sh`）适用于在本地编辑并执行脚本，而不需要在远程服务器上存在脚本文件。
+> 
+> 第二种方式（`ssh root@myserver script.sh`）要求脚本已存在于远程服务器上并具备执行权限。
+
