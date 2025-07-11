@@ -24,3 +24,7 @@ slmgr /ato
 kms服务器地址可在如下网站上查询： [https://www.coolhub.top/tech-articles/kms_list.html](https://www.coolhub.top/tech-articles/kms_list.html)
 
 > 注意：若失败请更换kms服务器地址重试
+> 
+> 或者先执行下面这个命令设置key后再此执行激活命令
+> 
+> slmgr -ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
