@@ -122,6 +122,8 @@ location: 南昌
 
 [qrcode](https://qrcode.antfu.me/#generator): 二维码生成工具
 
+[Blossom](https://github.com/blossom-editor/blossom): Blossom 是一个支持私有部署的云端双链笔记软件，你可以将你的笔记，图片，个人计划安排保存在自己的服务器中，并在任意设备之间实时同步。同时还是一个动态博客。
+
 ## 其他
 
 [cool-admin-midway](https://github.com/cool-team-official/cool-admin-midway): cool-admin(midway版)一个很酷的后台权限管理框架，模块化、插件化、CRUD极速开发，永久开源免费，基于midway.js 2.0、typeorm、mysql、jwt、element-ui等构建
