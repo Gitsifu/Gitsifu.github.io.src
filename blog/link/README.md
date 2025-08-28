@@ -126,6 +126,8 @@ location: 南昌
 
 [ConvertX](https://github.com/C4illin/ConvertX): 自托管在线文件转换器。支持超过1000种格式
 
+[docs](https://github.com/suitenumerique/docs): 开源的实时协作文档平台。这是一款支持多人协作的在线文档平台，完全免费开源。它基于 Django+React 构建，支持离线编辑自动同步、文档/页面级访问控制和 AI 辅助（摘要、翻译、纠错）等功能。
+
 ## 其他
 
 [cool-admin-midway](https://github.com/cool-team-official/cool-admin-midway): cool-admin(midway版)一个很酷的后台权限管理框架，模块化、插件化、CRUD极速开发，永久开源免费，基于midway.js 2.0、typeorm、mysql、jwt、element-ui等构建
