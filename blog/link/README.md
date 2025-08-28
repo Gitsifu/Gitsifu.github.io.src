@@ -20,7 +20,7 @@ location: 南昌
 
 [element-ui](https://element.eleme.cn/#/zh-CN): Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库
 
-[vant](https://vant-contrib.gitee.io/vant/#/zh-CN/): Vant 是有赞前端团队开源的移动端组件库，于 2017 年开源，已持续维护 4 年时间。Vant 对内承载了有赞所有核心业务，对外服务十多万开发者，是业界主流的移动端组件库之一。
+[vant](https://vant-ui.github.io/vant/#/zh-CN): Vant 是有赞前端团队开源的移动端组件库，于 2017 年开源，已持续维护 4 年时间。Vant 对内承载了有赞所有核心业务，对外服务十多万开发者，是业界主流的移动端组件库之一。
 
 [DataV](https://github.com/DataV-Team/DataV): Vue数据可视化组件库（类似阿里DataV，大屏数据展示），提供SVG的边框及装饰、图表、水位图、飞线图等组件，简单易用，长期更新(React版已发布)
 
